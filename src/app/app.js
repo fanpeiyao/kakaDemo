@@ -15,7 +15,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                     load:['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load([
                             'scripts/services/public-serv.js'
-                        ])
+                        ]);
                     }]
                 },
                 controller:'HomeCtrl'
@@ -42,7 +42,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                             'scripts/services/product-serv.js',
                             'scripts/services/userinfo-serv.js',
                             'views/product/css/product.css'
-                        ])
+                        ]);
                     }]
                 },
                 controller:function($scope){
@@ -82,7 +82,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                             'views/repayment/js/repayment-ctrl.js',
                             'scripts/services/repayment-serv.js',
                             'views/repayment/css/repayment.css'
-                        ])
+                        ]);
                     }]
                 }
             })
@@ -104,7 +104,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                             'views/order/css/order.css',
                             'views/order/js/order-ctrl.js',
                             'scripts/services/cart-serv.js'
-                        ])
+                        ]);
                     }]
                 }
             })
@@ -265,7 +265,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 })
                 .state('delivery.deliveryList',{
                     url:'/deliveryList',
-                    title:'我的发货单',
+                    title:'还款计划',
                     backState:'app',
                     templateUrl:'views/delivery/deliveryList.html',
                     controller:'DeliveryListCtrl'
@@ -402,7 +402,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
             $rootScope.previousState_params = fromParams;
 
             $rootScope.title = toState.title;
-            $rootScope.showBack = toState.backState != null;
+            $rootScope.showBack = toState.backState !== null;
             $rootScope.backState = toState.backState;
 
             angular.element(document).ready(function(){
@@ -429,7 +429,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
 
                 //check userinfo
                  $es.userinfo = $es.java("userInfoBean.getUserData");
-                 if($es.userinfo.status == "000" || $es.userinfo.retCode == "200"){
+                 if($es.userinfo.status === "000" || $es.userinfo.retCode === "200"){
                  $es.userinfo = $es.userinfo.data.user;
 
                      $rootScope.username = $es.userinfo.userName;
