@@ -301,18 +301,19 @@ myApp.directive('butterToast', function() {
      *      2、在需要弹出的时候调用modal.action()
      */
     .directive('fnAction',function () {
-    return {
-        restrict:'E',
-        transclude:true,
-        // template:'<div class = "fn-modal-actions" id="fn-actions">'
-        // +' <div class="fn-modal-actions-group"  style="overflow:scroll;height:16rem;background: #fff" ng-transclude>'
-        // +'</div>'
-        // +'<div class="fn-modal-actions-group">' +
-        // '<button class="fn-btn fn-btn-secondary fn-btn-block" data-fn-modal-close>取消</button>' +
-        // '</div>'+
-        // '</div>'
-    }
-})
+        return {
+            restrict:'EA',
+            transclude:true,
+            replace:true,
+            scope:{
+                actionId:'@'
+            },
+            templateUrl:'templates/fnaction.tpl.html',
+            link:function (scope,element,attrs) {
+                element.attr('id',scope.actionId)
+            }
+        }
+    })
     .directive('searchBar',function () {
         return {
             restrict:'E',
@@ -322,19 +323,8 @@ myApp.directive('butterToast', function() {
         }
     })
 
-    .directive('companyAction',['$modal',function ($modal) {
-        return {
-            require:'^?fnAction',
-            restrict:'EA',
-            transclude:true,
-            templateUrl:'templates/companyAction.tpl.html',
-            link:function (scope,element) {
-                element.find('#companyBox').on('click',function () {
-                    $modal.action({id:'company-action',act:'open'})
-                })
-            }
-        }
-    }])
+
+
 
 
 

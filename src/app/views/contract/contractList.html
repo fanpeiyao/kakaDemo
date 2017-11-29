@@ -2,22 +2,28 @@
 
 <div id="orderList" class="order-list">
     <div class="wrapper-head">
-        <!--搜素加时间-->
-        <div class="skin-back">
-            <div id="searchInput" class="fn-g searchnav search-tpl slide-top skin-padding" >
-                <form ng-submit="keySearch(searchVal)" class="payment skin-back-dark fn-fl" id="proForm">
-                    <i class="iconfont icon-sou p2 skin-white-color"></i>
-                    <a ui-sref="myorder.myorderSearch">
-                        <input type="search" ng-focus="showSearch()" placeholder="输入关键字搜索" class="skin-white-color payment-input" ng-model="searchVal">
-                    </a>
-                    <i class="iconfont icon-guanbi1 fn-fr skin-color-lighter" ng-click="clickClean($event)"></i>
-
-                </form>
-                <span class="fn-fr skin-color" ng-click="closeSearch()"></span>
-            </div>
-        </div>
+        <!--搜素-->
+        <search-bar></search-bar>
         <!--切换分公司-->
-        <company-action></company-action>
+        <div class="companyBox">
+            <div class="wrap-expand" id="companyBox" data-fn-modal="{target:'#company-action'">
+                <i class="iconfont fn-fl icon-gongsi skin-color"></i>
+                <span class="fn-text-truncate bindTxt" ng-bind="currentCompany.companyName"></span>
+                <span class="fn-text-rignt fn-fr"><i class="iconfont icon-qiehuan1 skin-color"></i></span>
+            </div>
+
+            <fn-action action-id="company-action">
+                <ul class="fn-list">
+                    <li ng-repeat="company in companyList" data-fn-modal-close ng-click="changeCompany(company)">
+                        <div class="fn-u-sm-2">
+                            <i class="iconfont" ng-class="{'icon-queren skin-color':currentCompany.companyId == company.companyId,'icon-yuanquan':currentCompany.companyId != company.companyId}"></i>
+                        </div>
+                        <a class="fn-u-sm-10" ng-bind="company.companyName"></a>
+                    </li>
+                </ul>
+            </fn-action>
+        </div>
+
         <!--切换导航-->
         <tab-bar>
             <li ng-repeat="status in orderStatusArray">
@@ -97,7 +103,7 @@
                 <span class="myorderMon fn-fr">
                 {{order.money|currency:'￥'}}
                 </span>
-                <span class="fn-fr">订单金额：</span>
+                <span class="fn-fr">待收租金：</span>
                 </div>
             </a>
         </li>

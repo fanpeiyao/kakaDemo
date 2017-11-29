@@ -2,7 +2,7 @@
  * Created by chent on 2017/1/18.
  */
 
-angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","ContractService",function ($scope,$rootScope,OrderService) {
+angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","ContractService",function ($scope,$rootScope,ContractService) {
     var page,time,status;
 
     $scope.changeStatus = function(newStatus){
@@ -38,7 +38,7 @@ angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","Co
 
     function loadOrders(status,page,time) {
         var toast = $.toast.show('loading');
-        var result = OrderService.getOrderList(status,page,time);
+        var result = ContractService.getOrderList(status,page,time);
         if(toast)
             setTimeout(function(){
                 toast.close();
@@ -51,19 +51,66 @@ angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","Co
 
     function initPage(){
         page =0;time=0;
-        var orderStatusArray = OrderService.getOrderStatusArray();
+        var orderStatusArray = ContractService.getOrderStatusArray();
         $scope.orderStatusArray = orderStatusArray;
         status = orderStatusArray[0];
         $scope.orders = loadOrders(status,page,time);
     }
-
+    //分公司
+    var all = {'companyId':undefined,'companyName':'全部分公司'};
+    $scope.currentCompany = all;
+    $scope.companyList = [all].concat(ContractService.getCompanyList());
+    $('#companyBox').on('click',function () {
+        $('#company-action').modal('open')
+    });
+    $scope.changeCompany = function (company) {
+        $scope.page = 0;
+        $scope.currentCompany = company;
+        // loadOrders();
+        $('#company-action').modal('close')
+    }
+    //搜索
+    $scope.showSearch = function () {
+        $scope.showSearchBody = true;
+    }
+    $scope.closeSearch = function () {
+        $scope.showSearchBody = false;
+    }
+    $scope.keySearch = function (keyValue) {
+        $scope.searchVal = keyValue;
+        $scope.page = 0;
+        loadOrders();
+        $scope.showSearchBody = false;
+        saveSearchHistory(keyValue);
+    }
+    $scope.clickClean = function ($event) {
+        $event.stopPropagation();
+        $scope.searchVal = '';
+        $scope.page = 0;
+        if(!$scope.showSearchBody)
+            loadOrders()
+    }
+    function saveSearchHistory(keyValue) {
+        if (keyValue === null || keyValue ==="")
+            return
+        var hisstring = istore.getLocal('contractHistory') || [];
+        var dup = false;
+        hisstring.forEach(function (item) {
+            if (item == keyValue)
+                dup = true;
+        })
+        if (!dup){
+            if (hisstring.length<10){
+                hisstring.unshift(keyValue)
+            }else {
+                hisstring.pop();
+                hisstring.unshift(keyValue)
+            }
+            istore.setLocal('contractHistory',hisstring)
+        }
+    }
     //初始化
     initPage();
 }]);
 
 
-myApp.controller("OrderDetailCtrl",["$scope","$rootScope",'$stateParams','OrderService',function ($scope,$rootScope,$stateParams,OrderService) {
-    //取得传过来的参数
-    var orderId = $stateParams.orderId;
-    $scope.order = OrderService.getOrderDetail(orderId);
-}]);
