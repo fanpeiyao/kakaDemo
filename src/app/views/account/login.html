@@ -1,0 +1,17 @@
+<div class="login-logo">
+</div>
+
+<div ng-show = "!mobileLogin">
+    <login-form></login-form>
+</div>
+
+<div ng-show = "mobileLogin">
+    <mobile-login>
+    </mobile-login>
+</div>
+
+<fieldset>
+    <div class="fn-fl" ng-show = "!mobileLogin"><a ng-click = "mobileLogin = !mobileLogin">手机登录</a></div>
+    <div class="fn-fl" ng-show = "mobileLogin"><a  ng-click = "mobileLogin = !mobileLogin">帐号登录</a></div>
+    <div class="fn-fr"><a>忘记密码</a></div>
+</fieldset>

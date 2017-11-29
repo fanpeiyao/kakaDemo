@@ -1,0 +1,59 @@
+<div id="deliveryList" class="delivery">
+    <div class="wrapper-head">
+        <!--搜索-->
+        <div class="fn-g search-nav back-white">
+            <div class="delivery-search" >
+                <i class="iconfont icon-sou search-color fn-padding-horizontal-xs"></i>
+                <a ui-sref="delivery.deliverySearch"><input type="text" placeholder="请输入内容" class="delivery-input"></a>
+
+            </div>
+        </div>
+
+        <!--tab切换-->
+            <tab-bar>
+                <li ng-repeat="status in deliveryStatusArray">
+                    <a  class="fn-btn fn-size" style="box-shadow:none;" href="javascript:void(0)" ng-click="changeStatus(status)">{{status.name}}</a>
+                </li>
+                <li>
+                    <drop-down>
+                        <a class="fn-btn">
+                            日期
+                            <i class="iconfont icon-ananzuiconv265 fn-size"></i>
+                        </a>
+                        <ul class="fn-dropdown-content deliveryList-dropdown" >
+                            <li class="fn-active"><a href="javascript:void(0)" ng-click="changeTime(6)">一周内</a></li>
+                            <li><a href="javascript:void(0)" ng-click="changeTime(7)">一个月内</a></li>
+                            <li><a href="javascript:void(0)" ng-click="changeTime(8)">三个月内</a></li>
+                        </ul>
+                    </drop-down>
+                </li>
+            </tab-bar>
+    </div>
+    <!--数据盒子-->
+        <iscroll-wrapper class="delivery-box">
+            <li ng-repeat="delivery in deliverys track by $index" style="border:none;background: #f2f2f2;">
+                <!--付款单列表-->
+                <a ui-sref="delivery.deliveryDetail({deliveryId:delivery.id})">
+                    <div class="delivery-list">
+                        <!--向上的三角-->
+                        <div class="back-white">
+                            <div class="delivery-numberlist">
+                                <i class="iconfont icon-bill-sent i-Blue deliveryOrder"></i>
+                                {{delivery.id}}
+                                <i class="iconfont icon-fanhui fn-fr fn-size Blue"></i>
+                            </div>
+                        </div>
+
+                        <div class="delivery-list-detail fn-size">
+                            <!--<p>经销商名称：<span class="time">工银聚股份有限公司</span></p>-->
+                            <p>发货时间：<span class="time">{{delivery.time}}</span></p>
+                            <p>发货状态：<span class="status">{{delivery.statusText[delivery.status]}}</span></p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </iscroll-wrapper>
+
+</div>
+<!--bottom bar  -->
+<bottom-bar></bottom-bar>

@@ -1,0 +1,30 @@
+<div class="profile">
+    <form action="">
+        <div class="title">
+            <p class="title_name">
+               {{companyName}}<span>{{role}}</span>
+            </p>
+            <div class="title_photo">
+                <img src="views/profile/img/photo.png" alt="">
+            </div>
+        </div>
+        <ul class="myAccount">
+            <li>
+                <label class="spa" for="aNum">客户编号 :</label>
+                <input class="inp" id="aNum" type="text" value="{{accountNum}}"  readonly="readonly">
+            </li>
+            <li>
+                <label class="spa" for="aName">登录名 :</label>
+                <input class="inp" id="aName" type="text" value="{{accountName}}" readonly="readonly">
+            </li>
+            <li>
+                <label class="spa" for="aCompany">客户名称 :</label>
+                <input class="inp" id="aCompany" type="text" value="{{name}}" readonly="readonly">
+            </li>
+            <li>
+                <label class="spa" for="aPhone">联系手机 :</label>
+                <input class="inp" type="text" id="aPhone" value="{{phone}}" readonly="readonly">
+            </li>
+        </ul>
+</form>
+</div>

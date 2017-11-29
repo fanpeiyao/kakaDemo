@@ -1,0 +1,35 @@
+<div class="page-content hide-bars-on-scroll">
+    <div class=" productDetail">
+
+        <div class="proDe-top">
+            <span class="proDe-top_name">POY</span>
+            <div class="proDe-top_icon">
+                <i class="iconfont icon-shoucang " ng-click="collection(product.productId)" ></i>
+            </div>
+            <div class="proDe-top_line"></div>
+        </div>
+
+        <div class="proDe-list">
+            <div class="proDe-list_main">
+                <div class="proDe-pic">
+                    <img src="views/product/img/default.jpg" alt="">
+                </div>
+                <div class="proDe-card">
+                    <div class="card-header">产品编号：{{product.productId}}</div>
+                    <div class="card-content">
+                        <div class="card-content-inner">规格：{{product.type}}</div>
+                        <div class="card-content-inner">价格：{{product.price|currency:'￥'}}</div>
+                        <div class="card-content-inner">分类号：{{product.length}}</div>
+                        <div class="card-content-inner">分类名：{{product.productName}}</div>
+                        <div class="card-content-inner">标准价  <span>{{product.price|currency:'￥'}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="proDe-btn">
+        <a ng-click="addToCart()"><div class="proDe-add">加入购物车</div></a>
+    </div>
+</div>
+
+

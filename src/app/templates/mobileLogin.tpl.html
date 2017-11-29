@@ -1,0 +1,34 @@
+<div>
+    <form id="mobileForm">
+        <fieldset>
+            <div class="fn-form-group">
+                <div class="fn-g fn-g-collapse">
+                    <div class="fn-input-group fn-input-group-secondary fn-u-sm-8">
+                        <span class="fn-input-group-label"><i class="fn-icon-mobile fn-icon-fw"></i></span>
+                        <input  type="number" class="fn-form-field" required minlength="11" maxlength="11"
+                               ng-model="mobilephone" placeholder="手机号"  pattern="^1(3|5|7|8){1}\d{9}" ng-focus="showError = false">
+                    </div>
+                    <div class="fn-u-sm-4">
+                        <button class="fn-btn fn-btn-primary fn-btn-block code-btn" id="getCode">获取验证码</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <form id="codeForm">
+        <fieldset>
+            <div class="fn-form-group">
+                <div  class="fn-input-group fn-input-group-secondary">
+                    <span class="fn-input-group-label"><i class="fn-icon-key fn-icon-fw"></i></span>
+                    <input type = "number" class="fn-form-field" ng-model="validateCode" required maxlength="4"
+                           minlength="4" placeholder="验证码" ng-focus="showError = false">
+                </div>
+            </div>
+            <div class="fn-alert fn-alert-danger" ng-show = "showError" ng-bind="errorMessage"></div>
+            <div>
+                <button class="fn-btn fn-btn-secondary fn-btn-block fn-disabled" id="checkCode">提交</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

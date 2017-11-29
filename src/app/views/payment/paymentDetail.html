@@ -1,0 +1,111 @@
+<div id="paymentdetId" class="payment">
+    <div class="fn-padding-sm payment paymentHead">
+        <div class="payment-content fn-cf">
+
+            <div class=" fn-padding-right-xs content-head b-bot">
+                <i class="iconfont icon-changpai i-color fn-padding-right-xs"></i>
+                      <span class=" fn-padding-left-xs">
+                          订单编号：
+                      </span>
+                <a class="mypaymentName color-67">
+                    {{payment.paymentId}}　　
+                </a>
+            </div>
+
+            <div class="content-center b-bot">
+                <div class="fn-size">
+                        <span>
+                            客户编号：
+                        </span>
+                    <a class="myorderName color-67">
+                        {{payment.customerName}} 　　
+                    </a>
+                </div>
+                <div class="fn-size">
+                        <span >
+                            客户名称：
+                        </span>
+                    <a class="color-67">
+                        {{payment.customerCompany}}
+                    </a>
+                </div>
+                <div class="fn-size">
+                        <span >
+                            付款方式：
+                        </span>
+                    <a class="color-67">
+                        {{payment.paymentMethod}}
+                    </a>
+                </div>
+                <div class="fn-size">
+                        <span >
+                            分公司编号：
+                        </span>
+                    <a class="color-67">
+                        {{payment.customerNum}}
+                    </a>
+                </div>
+                <div class="fn-size">
+                        <span >
+                            分公司名称：
+                        </span>
+                    <a class="color-67">
+                        {{payment.customerCompany}}
+                    </a>
+                </div>
+                <div class="fn-size">
+                        <span >
+                            创建时间：
+                        </span>
+                    <a class="color-67">
+                        {{payment.creationTime}}
+                    </a>
+                </div>
+            </div>
+
+            <div class="num-content informaNum-con bor-none  fn-padding-bottom-0">
+                        <span  class="fn-fl ">
+                           订单总额
+                        </span>
+                        <span  class="fn-fr ">
+                           {{payment.paymentMoney|currency:'￥'}}
+                        </span>
+            </div>
+            <div class="freight fn-padding fn-padding-top-0 fn-padding-bottom-0 fn-cf">
+                <p>
+                             <span class="fn-fl color-67 fn-text-xs">
+                               +运费
+                            </span>
+                            <span class="fn-fr color-67 fn-text-xs">
+                               {{payment.Prepaid|currency:'￥'}}
+                            </span>
+                </p>
+                <p>
+                            <span class="fn-fl color-67 fn-text-xs">
+                                -现金抵用券
+                            </span>
+                            <span class="fn-fr color-67 fn-text-xs">
+                               {{payment.discountCoupon|currency:'￥'}}
+                            </span>
+                </p>
+
+            </div>
+
+            <div class="b-top fn-padding-xs">
+                <div class="orderBottom">
+                    <a class="paymentMon fn-fr money">
+                        {{payment.outofpocket|currency:'￥'}}
+                    </a>
+                    <span class="fn-fr">支付金额：</span>
+                </div>
+                <div class="orderBottom bor-none height-sm line">
+                    <a class=" fn-fr color-67 fn-text-xs">
+                        {{payment.orderTime}}
+                    </a>
+                    <span class="fn-fr color-67 fn-text-xs">下单时间：</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

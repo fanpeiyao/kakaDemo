@@ -1,0 +1,89 @@
+
+
+<div id="orderList" class="order-list">
+    <div class="wrapper-head">
+        <!--搜素加时间-->
+        <div class="fn-g search-nav back-white">
+            <div class="payment">
+                <i class="iconfont icon-sou fn-size-color p2"></i>
+                <a ui-sref="myorder.myorderSearch">
+                    <input type="text" placeholder="请输入内容" class="payment-input">
+                </a>
+            </div>
+        </div>
+        <!--切换导航-->
+        <tab-bar>
+            <li ng-repeat="status in orderStatusArray">
+                <a  class="fn-btn fn-margin-0" href="javascript:void(0)" ng-click="changeStatus(status)">{{status.name}}</a>
+            </li>
+            <li>
+                <drop-down>
+                    <a class="fn-btn fn-margin-0">
+                        日期
+                        <i class="iconfont icon-ananzuiconv265"></i>
+                    </a>
+                    <ul class="fn-dropdown-content paymentList-dropdown myorder-dropdown" >
+                        <li class="fn-active"><a href="javascript:void(0)" ng-click="changeTime(6)">一周内</a></li>
+                        <li><a href="javascript:void(0)" ng-click="changeTime(7)">一个月内</a></li>
+                        <li><a href="javascript:void(0)" ng-click="changeTime(8)">三个月内</a></li>
+                    </ul>
+                </drop-down>
+            </li>
+        </tab-bar>
+    </div>
+
+    <!--数据盒子-->
+    <iscroll-wrapper class="myorder-box">
+        <li ng-repeat="order in orders track by $index">
+            <a ui-sref="myorder.orderDetail({orderId:order.id})" ng-class="{'badgeSuccessBox': order.status == 1, 'badgeBox': order.status == 2,'badgePendingBox':order.status == 0}">
+                <!--订单编号-->
+                <div class="num-content statusFa">
+                    <span class="myorderID">
+                        <i class="iconfont icon-wodedingdan i-Blue"></i>
+                        {{order.id}}
+                        <i class="iconfont icon-fanhui fn-fr Blue"></i>
+                    </span >
+                </div>
+
+                <!--订单详情-->
+                <div class="del-content">
+                    <div>
+                        <span class="leftspan">
+                            分公司：
+                        </span>
+                        <span class="myorderName">
+                            工银聚股份有限公司
+                        </span>
+                    </div>
+                    <div>
+                        <span class="leftspan">
+                            创建时间：
+                        </span>
+                        <span class="myorderTime">
+                            {{order.time}}
+                            <!--下单时间：2016-11-17　09:30:35-->
+                        </span>
+                    </div>
+                    <div>
+                        <span class="leftspan">
+                            状态：
+                        </span>
+                        <span class="myorderStau">
+                            {{order.statusText[order.status]}}
+                        </span>
+                    </div>
+                </div>
+                <!--订单金额-->
+                <div class="mon-content">
+                <span class="myorderMon fn-fr">
+                {{order.money|currency:'￥'}}
+                </span>
+                <span class="fn-fr">订单金额：</span>
+                </div>
+            </a>
+        </li>
+    </iscroll-wrapper>
+</div>
+
+<!--bottom bar  -->
+<bottom-bar></bottom-bar>

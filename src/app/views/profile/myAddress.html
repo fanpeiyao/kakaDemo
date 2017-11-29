@@ -1,0 +1,28 @@
+<!--我的收货地址-->
+<div class="profile">
+    <div class="myAddress">
+        <ul class="myAddress_list">
+            <li ng-click="clic($index)" ng-repeat="list in addressList">
+                <div class="myAddress_text">
+                    <p><span style="float: left;">{{list.name}}</span><span  style="float: right;">{{list.phone}}</span></p>
+                    <p class="dizhi">{{list.address}}</p>
+                </div>
+                <div class="edit">
+                    <!--<label class="fn-radio fn-secondary" style="display: inline-block;width:45%;float: left;">-->
+                        <!--<input type="radio" name="radio1" value="" data-fn-ucheck ng-checked="list.state"> 设为默认地址-->
+                    <!--</label>-->
+                    <div class="edit_left" ng-click="check($index)">
+                        <i class="iconfont icon-yuanquan"></i>设为默认地址
+                    </div>
+                    <div class="edit_right">
+                        <a ui-sref="profile.editAddress"><i class="bj"></i></a>
+                        <a><i class="sc" ng-click="delete($index)"></i></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <a ui-sref="profile.addAddress">
+            <div class="myAddress_btn"><span></span>新增收货地址</div>
+        </a>
+    </div>
+</div>

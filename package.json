@@ -1,0 +1,32 @@
+{
+  "name": "s3-fnui",
+  "version": "1.0.0",
+  "description": "a s3 mobile front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "no test",
+    "dev": "gulp build-dev",
+    "build": "gulp build",
+    "server": "gulp"
+  },
+  "keywords": [
+    "framework7",
+    "webpack",
+    "gulp"
+  ],
+  "author": "zjfh-chent",
+  "license": "MIT",
+  "devDependencies": {
+    "fnui": "^2.0.13",
+    "fs-extra": "^0.22.1",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.6",
+    "less": "^2.5.1"
+  }
+}

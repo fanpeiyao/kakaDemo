@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS reset */
+div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,
+pre, form, fieldset, table, th, td, input, table, textarea { margin: 0; padding: 0;}
+fieldset, img { border:none;}
+ol, ul, li { list-style:none;}
+span,i,em{display:inline-block;}
+html{background-color: #F2F2F2;}
+
+.main{width:100%;}
+.profile .error{border:1px solid red !important;}
+.profile .seccess{border:1px solid #009A61 !important;}
+.profile .btn{width: 7rem;height: 3rem;background-color: #2D83CE;border: none;border-radius: 5px;color: #fff;margin-left: 25%;}
+.profile .btn_bottom{width:100%;height:3.5rem;line-height:3.5rem;font-size:1.4rem;text-align:center;background-color: #2F83CE;color:#fff;position:fixed;bottom:0;outline:none;border:none;}
+.profile input{outline: none;}
+.profile .header{position: relative;z-index: 2000;}
+.profile .shadow{display:none;width:100%;height:100%;position: fixed;left:0;top:0;z-index: 1200;background-color: #F1F1F1;opacity: 0.5;}
+.profile .switch{display:none;width:100%;height:11.4rem;background-color: #fff;margin-top:5rem;position: absolute;top:0;left:0;z-index: 1300;}
+.profile .switch>ul{width:100%;height:100%;overflow: hidden;font-size:1rem;}
+.profile .switch>ul>li{width:25%;height:2.2rem;line-height:2.2rem;margin-left:6.25%;margin-top:2.1rem;text-align: center;border:1px solid #EAEAEA;border-radius:3px;float: left;}
+
+.profile .head{width:100%;height:10rem;background-color: #2F83CE;overflow: hidden;}
+.profile .photo{width: 5rem;height: 5rem;margin:0 auto;border:2px solid #fff;border-radius: 50%;overflow: hidden;}
+.profile .photo>img{width:100%;height:100%;}
+.profile .company{font-size:1.1rem;color:#DFE9F5;margin:1rem auto;text-align: center;}
+.profile .company>span{width:3.3rem;height:1.3rem;font-size:0.7rem;background-color: #fff;border-radius: 3px;color:#487E9D;position:relative;text-align: center;line-height:1.4rem;margin-left:0.5rem; }
+
+.profile .list_main{height:18.9rem;}
+.profile .cutLine{width:100%;height:5px;background-color: #F2F2F2;}
+.profile .list{width:100%;font-size:1.2rem;}
+.profile .list>a>li{width:100%;height:3.7rem;line-height:3.7rem; color:#828282;position:relative;background-color:#fff;}
+.profile .list>a>li>i{width:2rem;height:2rem;position:relative;top:15%;margin-left:1rem;margin-right:0.5rem;}
+.profile .list>a>li>em{width:0.3rem;height:0.83rem;background:url("../img/list_icon_left.png") no-repeat;background-size:100% 100%;position:absolute;right:1rem;top:50%;margin-top:-0.41rem;}
+.profile .remark{position:absolute;right:7%;color:#9F9F9F;}
+
+.profile .account,.address,.collect,.shopCar{border-bottom:1px solid #F4F4F4;}
+
+.profile .account>i{background:url("../img/list_icon00.png") no-repeat;background-size:100% 100%;}
+.profile .address>i{background:url("../img/list_icon01.png") no-repeat;background-size:100% 100%;}
+.profile .shopCar>i{background:url("../img/list_icon02.png") no-repeat;background-size:100% 100%;}
+.profile .collect>i{background:url("../img/list_icon03.png") no-repeat;background-size:100% 100%;}
+.profile .changePw>i{background:url("../img/list_icon04.png") no-repeat;background-size:100% 100%;}
+.profile .child>i{background:url("../img/list_icon05.png") no-repeat;background-size:100% 100%;}
+
+
+/*编辑地址、修改密码、新增地址*/
+.profile .addAddress{width:100%;height:100%;background-color:#F2F2F2;}
+.profile .addAddress .add_line{width:100%;height:1.1rem;background-color:#F2F2F2;}
+.profile .addAddress .add_list{width:100%;height:100%;background-color: #fff;border-bottom:1px solid #F0F0F0;}
+
+.profile .addAddress .add_list>li{width:95%;height:3.3rem;line-height:3.3rem;font-size:1.23rem;color:#696969;border-bottom: 1px solid #F2F2F2;margin:0 auto;overflow: hidden;}
+.profile .addAddress .add_list>li>span{display: inline-block;width:20%;text-align: right;}
+.profile .addAddress .add_list>li>input{display: inline-block;width:75%;height:3rem;padding-left:1rem;border:none;float: right;position:relative;top:0.15rem}
+.profile .addAddress .city{float:right;display: inline-block;width:0.63rem;height:0.56rem;margin-top:4.5%;margin-right:3%;background:url("../img/addAddress_icon.png") no-repeat;background-size:100% 100%;}
+.profile .addAddress .defultAddress{height:1.5rem;line-height: 1.5rem;font-size:1rem;margin:1rem 0 0 2rem;}
+.profile .addAddress .defultAddress>span{display: inline-block;width:1.5rem;height:1.5rem;margin-right:0.6rem;border-radius: 50%;background-color: #FB3E50;position:relative;top:21%;}
+.profile .addAddress .defultAddress>span>i{display: inline-block;width:1.5rem;height:1.5rem;background:url('../img/checked.png') no-repeat;background-size: 80% 80%;position:relative;left:12%;top:14%;}
+
+/*我的收货地址*/
+.profile .myAddress{width:100%;height:100%;background-color:#F2F2F2;overflow: hidden;}
+.profile .myAddress>ul{width:95%;height:100%;margin:0 auto;font-size:1.2rem;margin-top:1rem;}
+.profile .myAddress>ul>li{width:100%;height:8.3rem;border:1px solid #C1C1C1;border-radius:10px;background-color:#fff;margin-bottom:0.86rem;}
+.profile .myAddress_text{width:100%;height:65%;border-bottom:1px solid #CCCCCC;}
+.profile .myAddress_text>p{width:93%;height:2.4rem;line-height:2.4rem;margin:0 auto;}
+.profile .dizhi{color:#828282;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.profile .edit{width:93%;height:2.6rem;line-height:2.6rem;margin:0 auto;}
+.profile .edit_left{width:50%;height:2.6rem;float: left;}
+.profile .edit_right{width:50%;height:2.6rem;float:right;position: relative;}
+
+.profile .edit_left>i{position:relative;left:-2%;top:6%;}
+.profile .myAddress_list li .icon-yuanquan{color:#7D7D7D;}
+.profile .myAddress_list li .icon-queren{color:#FB3B4E;}
+
+.profile .myAddress_btn{width:95%;height:2.9rem;line-height: 2.9rem;text-align:center;color:#fff;border-radius:10px;margin:5.3rem auto 6rem auto;background-color: #2F83CE;}
+.profile .myAddress_btn>span{display: inline-block;width:1.4rem;height:1.4rem;margin-right:1rem;background:url("../img/addAddress_icon01.png") no-repeat;background-size:100% 100%;position:relative;top:10%;}
+.profile .edit_right>a>i{display:inline-block;width:1.43rem;height:1.43rem;position:absolute;right:7%;top:27%}
+.profile .bj{background:url("../img/edit.png") no-repeat;background-size:100% 100%;margin-right:2.5rem;}
+.profile .sc{background:url("../img/delete.png") no-repeat;background-size:100% 100%;}
+
+/*账户信息*/
+.profile .title{width:100%;height:7rem;border-bottom: 1px solid #F0F0F0;overflow: hidden;position:relative;}
+.profile .title_name{width:60%;height:7rem;line-height: 7rem;font-size:1.2rem;color:#10A6EB;float: left;margin-left:1.5rem;}
+.profile .title_name>span{width: 3.3rem;height: 1.3rem;font-size: 0.7rem;background-color: #2D83CE;border-radius: 3px;color: #fff;position: relative;text-align: center;line-height: 1.4rem;margin-left: 0.5rem;}
+.profile .title_photo{width: 5rem;height: 5rem;border: 2px solid #fff;border-radius: 50%;overflow: hidden;position:absolute;right:1.5rem;top:50%;margin-top:-2.5rem;}
+.profile .title_photo>img{width:100%;height:100%;}
+.profile .myAccount{width:100%;}
+.profile .myAccount label,input{display: inline-block}
+.profile .myAccount>li{width:100%;height:4rem;line-height: 4rem;border-bottom:1px solid #F0F0F0;overflow: hidden;background-color: #fff;}
+.profile .myAccount>li>.spa{font-weight:normal;text-align: left;font-size:1.2rem;color:#4C4B4B;margin-left:1.5rem;}
+.profile .myAccount>li>.inp{width:70%;height:4rem;color:#989898;outline: none;font-size: 1.1rem;border:none;text-align: right;float:right;margin-right:1.5rem;}
+.profile .myAccount>li>.remark0{width:50%;font-size:1rem;color:#F9AF87;}
+
+.profile #select_contact{display: inline-block;width: 75%;height: 3rem;border: none;float: right;position: relative;}
+.profile #show_contact{width:100%;height:3rem;line-height:3rem;border:none;padding-left:1rem;}
+.ios-select-widget-box header.iosselect-header a {color:#2D83CE;}

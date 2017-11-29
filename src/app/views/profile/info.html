@@ -1,0 +1,78 @@
+<!--个人信息-->
+<div class="profile">
+    <div class="switch">
+        <ul>
+            <li>经销商</li>
+            <li>业务员</li>
+            <li>内勤</li>
+            <li>财务</li>
+            <li>总经理</li>
+            <li>业务员</li>
+        </ul>
+    </div>
+    <div class="shadow"></div>
+
+    <div class="main">
+        <div class="head">
+            <div class="photo">
+                <img src="views/profile/img/photo.png" alt="">
+            </div>
+            <p class="company">{{companyName}}<span>{{role}}</span></p>
+        </div>
+        <div class="list_main">
+            <ul class="list">
+                <a ui-sref="profile.myAccount">
+                    <li class="account">
+                        <i></i>
+                        <span>账户信息</span>
+                        <span class="remark"></span>
+                        <em></em>
+                    </li>
+                </a>
+                <a ui-sref="profile.myAddress">
+                    <li class="address">
+                        <i></i>
+                        <span>地址管理</span>
+                        <span class="remark"></span>
+                        <em></em>
+                    </li>
+                </a>
+                <a ui-sref="profile.changePw">
+                    <li class="changePw">
+                        <i></i>
+                        <span>修改密码</span>
+                        <span class="remark"></span>
+                        <em></em>
+                    </li>
+                </a>
+            </ul>
+            <div class="cutLine"></div>
+
+            <ul class="list">
+                <a ui-sref="myorder.orderList">
+                    <li class="collect">
+                        <i></i>
+                        <span>我的订单</span>
+                        <span class="remark"></span>
+                        <em></em>
+                    </li>
+                </a>
+                <a ui-sref="order.cart">
+                    <li class="shopCar">
+                        <i></i>
+                        <span>我的购物车</span>
+                        <span class="remark"></span>
+                        <em></em>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--bottom bar  -->
+<bottom-bar></bottom-bar>
+
+
+
+

@@ -1,0 +1,15 @@
+<form>
+    <fieldset>
+        <div class="fn-form-group">
+            <div  class="fn-input-group fn-input-group-secondary">
+                <span class="fn-input-group-label"><i class="fn-icon-key fn-icon-fw"></i></span>
+                <input type = "number" class="fn-form-field" ng-model="validateCode" required maxlength="4"
+                       minlength="4" placeholder="验证码" ng-focus="showError = false">
+            </div>
+        </div>
+        <div class="fn-alert fn-alert-danger" ng-show = "showError" ng-bind="errorMessage"></div>
+        <div>
+            <button class="fn-btn fn-btn-secondary fn-btn-block fn-disabled" id="checkCode">提交</button>
+        </div>
+    </fieldset>
+</form>

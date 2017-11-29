@@ -1,0 +1,34 @@
+<!--<password-form></password-form>-->
+
+<div class="profile">
+    <form name="signUpForm" ng-submit="submitForm()">
+        <div class="addAddress">
+            <div class="add_line"></div>
+            <ul class="add_list">
+                <li>
+                    <span>原密码:</span>
+                    <input type="password" name="oldPw"
+                           ng-model="pwDate.oldPw" required ng-minlength="6" ng-maxlength="20"
+                           ng-class="{'error':signUpForm.oldPw.$invalid && signUpForm.oldPw.$touched,'seccess':signUpForm.oldPw.$valid}"
+                    >
+                </li>
+                <li>
+                    <span>输入密码:</span>
+                    <input type="password" name="newPw1"
+                           ng-model="pwDate.newPw1" required ng-minlength="6" ng-maxlength="20"
+                           ng-class="{'error':signUpForm.newPw1.$invalid && signUpForm.newPw1.$touched,'seccess':signUpForm.newPw1.$valid}"
+                    >
+                </li>
+                <li>
+                    <span>确认密码:</span>
+                    <input type="password" name="newPw2"
+                           ng-model="pwDate.newPw2" required ng-minlength="6" ng-maxlength="20"
+                           ng-class="{'error':signUpForm.newPw2.$invalid && signUpForm.newPw2.$touched,'seccess':signUpForm.newPw2.$valid}"
+                           compare="pwDate.newPw1"
+                    >
+                </li>
+            </ul>
+        </div>
+        <button type="submit" class="btn_bottom" ng-disabled="signUpForm.$invalid">确认</button>
+    </form>
+</div>

@@ -1,0 +1,15 @@
+<div id="iscroll-wrapper" ng-model="myScroll">
+    <div id="scroller">
+        <div id="pullDown"  ng-click="refreshPage()" class="fn-vertical-align">
+            <span class="fn-vertical-align-middle pullDownIcon"></span>
+            <span class="fn-vertical-align-middle pullDownLabel">下拉刷新...</span>
+        </div>
+
+        <ul ng-transclude class="fn-list fn-list-border"></ul>
+
+        <div id="pullUp"  ng-click="loadMore()" class="fn-vertical-align">
+            <span class="fn-vertical-align-middle pullUpIcon"></span>
+            <span class="fn-vertical-align-middle pullUpLabel">上拉加载更多...</span>
+        </div>
+    </div>
+</div>

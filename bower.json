@@ -1,0 +1,30 @@
+{
+  "name": "s3-angular-fnui",
+  "description": "s3 fnui front end with angularjs",
+  "main": "app.js",
+  "authors": [
+    "zjfh-chent"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "s3",
+    "fnui"
+  ],
+  "homepage": "index.html",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~3.1.1",
+    "angular-ui-router": "~0.3.2",
+    "oclazyload": "~1.0.9",
+    "iscroll": "^5.2.0"
+  },
+  "devDependencies": {
+    "angular-animate": "^1.6.2",
+    "angular": "^1.6.2"
+  }
+}
