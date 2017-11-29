@@ -15,7 +15,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                     load:['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load([
                             'scripts/services/public-serv.js'
-                        ])
+                        ]);
                     }]
                 },
                 controller:'HomeCtrl'
@@ -42,7 +42,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                             'scripts/services/product-serv.js',
                             'scripts/services/userinfo-serv.js',
                             'views/product/css/product.css'
-                        ])
+                        ]);
                     }]
                 },
                 controller:function($scope){
@@ -82,7 +82,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                             'views/repayment/js/repayment-ctrl.js',
                             'scripts/services/repayment-serv.js',
                             'views/repayment/css/repayment.css'
-                        ])
+                        ]);
                     }]
                 }
             })
@@ -104,7 +104,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                             'views/order/css/order.css',
                             'views/order/js/order-ctrl.js',
                             'scripts/services/cart-serv.js'
-                        ])
+                        ]);
                     }]
                 }
             })
@@ -163,7 +163,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
             })
             .state('contract.contractList',{
                 url:'/contractList',
-                title:'订单',
+                title:'合同',
                 templateUrl:'views/contract/contractList.html',
                 controller:'ContractListCtrl'
             })
