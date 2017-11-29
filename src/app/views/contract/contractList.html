@@ -35,7 +35,7 @@
     <!--数据盒子-->
     <iscroll-wrapper class="myorder-box">
         <li ng-repeat="order in orders track by $index">
-            <a ui-sref="myorder.orderDetail({orderId:order.id})" ng-class="{'badgeSuccessBox': order.status == 1, 'badgeBox': order.status == 2,'badgePendingBox':order.status == 0}">
+            <a ui-sref="contract.contractDetail({orderId:order.id})" ng-class="{'badgeSuccessBox': order.status == 1, 'badgeBox': order.status == 2,'badgePendingBox':order.status == 0}">
                 <!--订单编号-->
                 <div class="num-content statusFa">
                     <span class="myorderID">

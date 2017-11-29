@@ -112,5 +112,10 @@ angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","Co
     //初始化
     initPage();
 }]);
+myApp.controller("ContractDetailCtrl",["$scope","$rootScope",'$stateParams','ContractService',function ($scope,$rootScope,$stateParams,ContractService) {
+    //取得传过来的参数
+    var orderId = $stateParams.orderId;
+    $scope.order = ContractService.getOrderDetail(orderId);
+}]);
 
 
