@@ -75,6 +75,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 url:'/repayment',
                 templateUrl: 'views/public/main.html',
                 abstract:true,
+                backState:'app',
                 resolve:{
                     load:['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load([
@@ -88,6 +89,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
             .state('repayment.repaymentDetail',{
                 url:'/repaymentDetail',
                 title:'还款',
+                backState:'app',
                 templateUrl:'views/repayment/repaymentDetail.html',
                 controller:'RepaymentCtrl'
             })
@@ -141,9 +143,9 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 backState:'product.productList'
             })
 
-        /**
-         *  我的订单
-         */
+            /**
+             *  我的订单
+             */
                 .state('myorder',{
                     url:'/myorder',
                     templateUrl:'views/public/main.html',
