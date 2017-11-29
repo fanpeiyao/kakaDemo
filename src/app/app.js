@@ -70,6 +70,27 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 controller:'ProductDetailCtrl'
             })
 
+            //还款模块
+            .state('repayment',{
+                url:'/repayment',
+                templateUrl: 'views/public/main.html',
+                abstract:true,
+                resolve:{
+                    load:['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load([
+                            'views/repayment/js/repayment-ctrl.js',
+                            'scripts/services/repayment-serv.js',
+                            'views/repayment/css/repayment.css'
+                        ])
+                    }]
+                }
+            })
+            .state('repayment.repaymentDetail',{
+                url:'/repaymentDetail',
+                title:'还款',
+                templateUrl:'views/repayment/repaymentDetail.html',
+                controller:'RepaymentCtrl'
+            })
             //购物车和订单部分
             .state('order',{
                 url:'/order',

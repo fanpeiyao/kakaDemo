@@ -13,6 +13,7 @@ module.exports = {
         {name:'order',path: appPath + 'views/order'},
         {name:'profile',path: appPath + 'views/profile'},
         {name:'delivery',path: appPath + 'views/delivery'},
-        {name:'public',path: appPath + 'views/public'}
+        {name:'public',path: appPath + 'views/public'},
+        {name:'repayment',path: appPath + 'views/repayment'}
     ]
 };

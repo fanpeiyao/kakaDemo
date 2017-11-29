@@ -1,36 +1,51 @@
 <!--head bar  -->
-<head-bar></head-bar>
+<!--<head-bar></head-bar>-->
 
 <div class="wrapper-head">
-    <div class="home-data-wrapper back-blue">
-        <!--订单金额Box-->
-        <div class="home-top back-blue ">
-            <!--订单金额-->
-            <div class="fn-panel fn-panel-default home-con-top back-blue">
-                <div class="fn-panel-bd text-center padd-bot0 color-white">订单金额（万元）</div>
-                <div class="fn-panel-bd text-center color-white" id="orderNum">{{myOrdermoney.myOrdermoney}}</div>
-            </div>
-            <!--今日+本月-->
-            <div class="fn-g home-con-bot">
-                <div class="fn-u-sm-6 color-white">
-                    <div class="today-txt">今日成交额 ( 元 )</div>
-                    <div class="today-mon" id="today-mon">{{myOrderDay.moneyDay}}</div>
-                    <div class="today-num">共 <span id="today-num">{{myOrderDay.num}}</span> 笔</div>
-                </div>
-                <div class="fn-u-sm-6 color-white">
-                    <div class="today-txt">本月成交额 ( 元 )</div>
-                    <div class="today-mon" id="month-mon">{{myOrderMonth.moneyMonth}}</div>
-                    <div class="today-num">共 <span id="month-num">{{myOrderMonth.num}}</span> 笔</div>
-                </div>
+    <div class="home-img-wrapper">
+
+        <!--banner-->
+        <div class="home-top">
+            <div class="fn-slider fn-slider-default" data-fn-flexslider>
+                <ul class="fn-slides">
+                    <!--<li ng-repeat="slide in config.slides track by $index">
+                        <img ng-src="{{slide}}" alt="" style="height: 13rem">
+                    </li>-->
+                    <li >
+                        <img src="views/public/img/bg1.png"  alt="" style="height: 13rem;width:100%">
+                    </li>
+                    <li>
+                        <img src="views/public/img/bg1.png" alt="" style="height: 13rem;width:100%">
+                    </li>
+                    <li>
+                        <img src="views/public/img/bg1.png"  alt="" style="height: 13rem;width:100%">
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-</div>
-
-    <scroll-content>
+        <!--功能列表-->
         <div class="home-list">
             <ul class = "fn-avg-sm-3">
                 <li class="fn-text-middle">
+                    <a ui-sref="myorder.orderList">
+                        <i class="iconfont icon-wodedingdan color-credit"></i>
+                        <span>合同</span>
+                    </a>
+                </li>
+                <li class="fn-text-middle">
+                    <a ui-sref="repayment.repaymentDetail" >
+                        <i class="iconfont icon-fukuandan  color-finance"></i>
+                        <span>还款</span>
+
+                    </a>
+                </li>
+                <li class="fn-text-middle">
+                    <a ui-sref="delivery.deliveryList">
+                        <i class="iconfont icon-bill-sent color-more"></i>
+                        <span>还款明细</span>
+                    </a>
+                </li>
+                <!--<li class="fn-text-middle">
                     <a ui-sref="myorder.orderList">
                         <i class="iconfont icon-wodedingdan color-credit"></i>
                         <span>我的订单</span>
@@ -60,16 +75,13 @@
                         <i class="iconfont icon-gerenxinxi color-credit "></i>
                         <span>个人信息</span>
                     </a>
-                </li>
-                <li class="fn-text-middle" ng-repeat="otherModule in otherModules">
-                    <a href="{{otherModule.url}}">
-                        <i class="iconfont icon-fill1fill2 color-more"></i>
-                        <span ng-bind="otherModule.name"></span>
-                    </a>
-                </li>
+                </li>-->
             </ul>
         </div>
-    </scroll-content>
+    </div>
+
+
+</div>
 
 
 <!--bottom bar  -->
