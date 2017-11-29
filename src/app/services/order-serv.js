@@ -14,9 +14,8 @@ angular.module("myApp").service("OrderService",['$es',function($es){
         this.getOrderStatusArray = function(){
             return [
                 {id:null,name:'全  部'},
-                {id:0, name:'未审核'},
-                {id:1,name:'已审核'},
-                {id:2,name:'已作废'}
+                {id:0, name:'已起租'},
+                {id:1,name:'已结束'},
             ];
         };
     

@@ -1,0 +1,30 @@
+<div class="skin-back">
+    <div id="searchInput" class="fn-g searchnav search-tpl slide-top skin-padding" >
+        <form ng-submit="keySearch(searchVal)" class="payment skin-back-dark fn-fl" id="proForm">
+            <i class="iconfont icon-sou p2 skin-white-color"></i>
+            <a ui-sref="myorder.myorderSearch">
+                <input type="search" ng-focus="showSearch()" placeholder="输入关键字搜索" class="skin-white-color payment-input" ng-model="searchVal">
+            </a>
+            <i class="iconfont icon-guanbi1 fn-fr skin-color-lighter" ng-click="clickClean($event)"></i>
+
+        </form>
+        <span class="fn-fr skin-color" ng-click="closeSearch()">取消</span>
+    </div>
+
+    <div id="searchBody" class="proSear slideTop" ng-show="showSearchBody">
+        <div class="proSear-category">
+            <div class="fn-vertical-align SearCategoryTitle">
+                <div class="fn-vertical-align-middle">
+                    历史搜索
+                </div>
+            </div>
+            <ul class="his_list">
+                <li class="fn-text-middle fn-fl skin-padding-right" ng-repeat="searchhis in searchHistory">
+                    <span ng-click="keySearch(searchhis)" ng-bind="searchhis"></span>
+                </li>
+            </ul>
+        </div>
+        <div ng-transclude></div>
+    </div>
+</div>
+

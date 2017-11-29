@@ -1,0 +1,16 @@
+<div class="wrap-expand" id="companyBox">
+    <i class="iconfont fn-fl icon-gongsi skin-color"></i>
+    <span class="fn-text-truncate bindTxt" ng-bind="currentCompany.companyName"></span>
+    <span class="fn-text-rignt fn-fr"><i class="iconfont icon-qiehuan1 skin-color"></i></span>
+</div>
+
+<fn-action action-id="company-action">
+    <ul class="fn-list">
+        <li ng-repeat="company in companyList" data-fn-modal-close ng-click="changeCompany(campany)">
+            <div class="fn-u-sm-2">
+                <i class="iconfont" ng-class="{'icon-queren skin-color':currentCompany.companyId == company.companyId,'icon-yuanquan':currentCompany.companyId != company.companyId}"></i>
+            </div>
+            <a class="fn-u-sm-10" ng-bind="company.companyName"></a>
+        </li>
+    </ul>
+</fn-action>

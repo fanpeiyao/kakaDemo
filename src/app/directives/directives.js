@@ -304,14 +304,38 @@ myApp.directive('butterToast', function() {
     return {
         restrict:'E',
         transclude:true,
-        template:'<div class = "fn-modal-actions" id="fn-actions">'
-        +' <div class="fn-modal-actions-group"  style="overflow:scroll;height:16rem;background: #fff" ng-transclude>'
-        +'</div>'
-        +'<div class="fn-modal-actions-group">' +
-        '<button class="fn-btn fn-btn-secondary fn-btn-block" data-fn-modal-close>取消</button>' +
-        '</div>'+
-        '</div>'
+        // template:'<div class = "fn-modal-actions" id="fn-actions">'
+        // +' <div class="fn-modal-actions-group"  style="overflow:scroll;height:16rem;background: #fff" ng-transclude>'
+        // +'</div>'
+        // +'<div class="fn-modal-actions-group">' +
+        // '<button class="fn-btn fn-btn-secondary fn-btn-block" data-fn-modal-close>取消</button>' +
+        // '</div>'+
+        // '</div>'
     }
-});
+})
+    .directive('searchBar',function () {
+        return {
+            restrict:'E',
+            transclude:true,
+            replace:true,
+            templateUrl:'templates/searchbar.tpl.html'
+        }
+    })
+
+    .directive('companyAction',['$modal',function ($modal) {
+        return {
+            require:'^?fnAction',
+            restrict:'EA',
+            transclude:true,
+            templateUrl:'templates/companyAction.tpl.html',
+            link:function (scope,element) {
+                element.find('#companyBox').on('click',function () {
+                    $modal.action({id:'company-action',act:'open'})
+                })
+            }
+        }
+    }])
+
+
 
 
