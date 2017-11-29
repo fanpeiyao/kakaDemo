@@ -30,45 +30,6 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
             })
 
 
-            //产品模块
-            .state('product',{
-                url:'/product',
-                templateUrl: 'views/public/main.html',
-                abstract:true,
-                resolve:{
-                    load:['$ocLazyLoad', function($ocLazyLoad) {
-                        return $ocLazyLoad.load([
-                            'views/product/js/product-ctrl.js',
-                            'scripts/services/product-serv.js',
-                            'scripts/services/userinfo-serv.js',
-                            'views/product/css/product.css'
-                        ]);
-                    }]
-                },
-                controller:function($scope){
-                    $scope.showCart = true;
-                }
-            })
-            .state('product.productList',{
-                url:'/productList',
-                title:'产品',
-                templateUrl:'views/product/productList.html',
-                controller:'ProductCtrl'
-            })
-            .state('product.productSearch',{
-                url:'/productSearch',
-                title:'产品搜索',
-                backState:'product.productList',
-                templateUrl:'views/product/productSearch.html',
-                controller:'ProductSearchCtrl'
-            })
-            .state('product.productDetail',{
-                url:'/productDetail/:productId',
-                backState:'product.productList',
-                title:'产品详情',
-                templateUrl:'views/product/productDetail.html',
-                controller:'ProductDetailCtrl'
-            })
 
             //还款模块
             .state('repayment',{
@@ -173,6 +134,14 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 templateUrl:'views/contract/contractDetail.html',
                 controller:'ContractDetailCtrl'
             })
+            .state('contract.replayDetail',{
+                url:'/replayDetail',
+                // url:'/orderDetail/:orderId',
+                backState:'contract.contractList',
+                title:'还款计划',
+                templateUrl:'views/contract/replayDetail.html',
+                // controller:'ReplayDetailCtrl'
+            })
 
             /**
              *  我的订单
@@ -212,45 +181,6 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                     //controller:'OrderSearchCtrl'
                 })
 
-
-        /**
-         *         支付信息
-         */
-                .state('payment',{
-                    url:'/payment',
-                    templateUrl:'views/public/main.html',
-                    abstract:true,
-                    resolve:{
-                        load:['$ocLazyLoad', function($ocLazyLoad) {
-                            return $ocLazyLoad.load([
-                                'views/payment/js/payment-ctrl.js',
-                                'scripts/services/payment-serv.js',
-                                'views/payment/css/payment.css'
-                            ]);
-                        }]
-                    }
-                })
-                .state('payment.paymentList',{
-                    url:'/paymentList',
-                    title:'付款',
-                    backState:'app',
-                    templateUrl:'views/payment/paymentList.html',
-                    controller:'PaymentListCtrl'
-                })
-                .state('payment.paymentDetail',{
-                    url:'/paymentDetail/:paymentId',
-                    title:'付款详情',
-                    backState:'payment.paymentList',
-                    templateUrl:'views/payment/paymentDetail.html',
-                    controller:'PaymentDetailCtrl'
-                })
-                .state('payment.paymentSearch',{
-                    url:'/paymentSearch',
-                    title:'搜索付款单',
-                    backState:'payment.paymentList',
-                    templateUrl:'views/payment/paymentSearch.html',
-                    //controller:'paymentSearchCtrl'
-                })
 
             /**
              * 发货信息
