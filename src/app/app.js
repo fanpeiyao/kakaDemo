@@ -143,6 +143,31 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 backState:'product.productList'
             })
 
+
+            /**
+             *  合同
+             */
+            .state('contract',{
+                url:'/contract',
+                templateUrl:'views/public/main.html',
+                abstract:true,
+                resolve:{
+                    load:['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load([
+                            'views/contract/js/contract-ctrl.js',
+                            'scripts/services/contract-serv.js',
+                            'views/contract/css/contract.css'
+                        ]);
+                    }]
+                }
+            })
+            .state('contract.contractList',{
+                url:'/contractList',
+                title:'订单',
+                templateUrl:'views/contract/contractList.html',
+                controller:'ContractListCtrl'
+            })
+
             /**
              *  我的订单
              */

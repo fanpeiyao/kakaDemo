@@ -144,7 +144,6 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
 .footer{
     width:100%;
     background: #fff;
-    border-top: 1px solid #E8E8E8;
 }
 .footer .fn-btn-group{
     width:100%;
