@@ -34,3 +34,247 @@ html{background-color:#fff;}
 .repayList .listbottom_content{width:100%;}
 .repayList .listbottom_content li{width:100%;height:3.5rem;line-height:3.5rem;color:#818181;overflow: hidden;border-bottom: 1px solid #dbdbdb;}
 .repayList .listbottom_content li span{display:inline-block;width:25%;float:left;text-align:center;}
+#searchInput .payment>a>input{
+    display: inline-block;
+    width: 100%;
+    height: 2.4rem;
+    padding: .5rem 0 .5rem 10%;
+    line-height: 2.4rem;
+    border-radius: .6rem;
+    background-color: transparent;
+}
+#searchInput .payment>a>input::-webkit-input-placeholder{
+    color: #fff;
+}
+#searchInput.search-nav>span{
+    display: none;
+    height: 100%;
+    line-height: 2.4rem;
+    font-size: 1.28rem;
+}
+#searchInput.newSearchInput>span{
+    display: block;
+}
+#searchInput.withheadSearchInput{
+    top:-4rem;
+}
+.order-list .p2{
+    left:2%;
+    vertical-align: middle;
+    height: 100%;
+    line-height: 30px;
+    font-size: 1.8rem;
+    position: absolute;
+    color: #fff;
+}
+#searchInput.search-nav .payment{
+    width:100%;
+    border-radius: .5rem;
+    position: relative;
+    z-index: 1000;
+    height: 30px;
+    background: #0e69b8;
+}
+#searchInput.search-nav.newSearchInput .payment{
+    width:90%;
+    background: #f6f6f6;
+    color: #acacac;
+}
+#searchInput.search-nav.newSearchInput .payment>i{
+    color: #acacac;
+}
+#searchInput.search-nav .payment-input{
+    border:none;
+    width:80%;
+    outline: none;
+    line-height: 26px;
+    height:26px;
+}
+#searchInput.search-nav.newSearchInput .payment-input{
+    color: #666;
+}
+#searchInput.search-nav.newSearchInput .payment-input::-webkit-input-placeholder{
+    color: #666;
+}
+#searchInput.newSearchInput{
+    padding: 1.6rem .8rem;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 1002;
+    position: absolute;
+    top:0;
+    height:auto;
+    box-sizing: border-box;
+    background: #fff;
+}
+.proSear{
+    width: 100%;
+    position: fixed;
+    top:0;
+    bottom:0;
+    z-index: 1001;
+    background: #fff;
+    max-width: 720px;
+}
+.proSear-category{
+    width: 100%;
+    margin: 0 auto;
+    padding: .4rem .8rem 0 .8rem;
+    margin-top: 6.6rem;
+}
+.proSear .his_list>li{
+    margin-top: 1rem;
+    height: 2rem;
+}
+.skin-padding-right{
+    padding-right: .8rem;
+}
+.proSear .his_list>li>span{
+    font-size: 1rem;
+    width: auto;
+    height: 2rem;
+    padding: 0 1.2rem;
+    line-height: 2rem;
+    border-radius: 30px;
+    background-color: #f6f6f6;
+    color: #666;
+}
+/*tab切换*/
+.order-list .myorder-tabs>li a{
+    padding: .4rem 0;
+    border: none;
+    color:#000;
+}
+.order-list .myorder-tabs .fn-dropdown {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.order-list  .fn-dropdown i{
+    font-size: 1rem;
+}
+.order-list .fn-nav-tabs>li a{
+    margin-right: 5px;
+    display: block;
+    position: relative;
+}
+.order-list .myorder-tabs>li>a:hover{
+    border: none;
+    background-color: #fff;
+    color: #2d83ce;
+}
+
+.order-list .myorder-box ul>li{
+    margin-top: .6rem;
+    overflow: hidden;
+    border: none;
+
+}
+.order-list .myorder-box ul>li>a{
+    display: block;
+    padding: 0;
+}
+
+.order-list .num-content,.mon-content{
+    height: 3.1rem;
+}
+.order-list .myorder-box .num-content .icon-fanhui {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+.order-list .num-content{
+    border-bottom: 1px solid #e5e5e5;
+    background: #fff;
+}
+.order-list .mon-content{
+    padding: 0 .6rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.order-list .badge span{
+    position: relative;
+    top: -32px;
+    left: 6px;
+    width: 1.4rem;
+    white-space: nowrap;
+}
+.order-list .num-content .myorderID{
+    display: inline-block;
+    height: 100%;width: 100%;
+    line-height:3.1rem;
+    color: #000;
+    padding: 0 .8rem;
+}
+.order-list .mon-content span{
+    display: inline-block;
+    height: 100%;
+    line-height:3.1rem;
+    color: #000;
+}
+.order-list .myorderTime,.myorderName{
+    color: #999;
+}
+.order-list .mon-content .myorderMon{
+    display: inline-block;
+    height: 100%;
+    line-height:3.1rem;
+    color: #fb3b4e;
+    font-weight: 600;
+}
+.order-list .del-content{
+    min-height: 5rem;
+    padding: .6rem;
+    background: #fff;
+    font-size: 1.1rem;
+}
+.order-list .del-content{
+    color: #999;
+}
+.order-list .myorderStau{
+    color: #F27405;
+}
+
+
+/*主题色*/
+.skin-back{
+    background: #2d83ce;
+}
+.skin-color{
+    color: #2d83ce;
+}
+.skin-padding{
+    padding: .8rem;
+}
+.skin-color-lighter{
+
+}
+/*******************************分公司****************************/
+.companyBox{
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    padding: .3rem .8rem;
+}
+.wrap-expand{
+    height: 2.2rem;
+}
+.wrap-expand .bindTxt{
+    padding-left: .3rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
+}
+.fn-modal-actions-group .fn-list>li>div{
+    padding: .8rem;
+    color: #bebebe;
+    text-align: center;
+}
+.fn-modal-actions-group .fn-list>li>a{
+    padding: 1.1rem 1.2rem 1.1rem 0;
+    color: #111;
+    text-align: left;
+    padding-left: 0;
+}
+.fn-dimmer{
+    background: rgba(199,199,199,.5);
+}
+.fn-modal-actions-group{
+    margin: 0!important;
+}

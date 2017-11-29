@@ -128,6 +128,12 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 templateUrl:'views/contract/contractList.html',
                 controller:'ContractListCtrl'
             })
+            .state('contract.contractDetail',{
+                url:'/contractList',
+                title:'合同详情',
+                templateUrl:'views/contract/contractDetail.html',
+                controller:'ContractDetailCtrl'
+            })
             .state('contract.replayDetail',{
                 url:'/replayDetail',
                 // url:'/orderDetail/:orderId',

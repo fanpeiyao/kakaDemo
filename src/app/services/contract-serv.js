@@ -96,4 +96,26 @@ angular.module("myApp").service("ContractService",['$es',function($es){
             return orderDetail;
         }
 
+
+        this.getCompanyList = function(){
+            //get orderDetail
+            var company = {
+                branchCompany:[
+                    {
+                        companyId:'001',
+                        companyName:'ABC供应链集团有限公司'
+                    },{
+                        companyId:'002',
+                        companyName:'浙江化工有限公司'
+
+                    },{
+                        companyId:'003',
+                        companyName:'浙江某某集团有限公司'
+                    }
+                ]
+            };
+
+            return company.branchCompany;
+        }
+
     }]);
