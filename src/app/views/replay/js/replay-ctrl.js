@@ -2,6 +2,4 @@ angular.module("myApp").controller("ReplayListCtrl",["$scope","ReplayService",fu
 
 }]);
 
-myApp.controller("ReplayDetailCtrl",["$scope","$rootScope",'$stateParams','ReplayService',function ($scope,$rootScope,$stateParams,ReplayService) {
 
-}]);
