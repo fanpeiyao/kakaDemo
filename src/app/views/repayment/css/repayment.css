@@ -6,11 +6,6 @@
     background: #f2f2f2;
     padding-top: 3rem;
 }
-
-.repaymentBox .inputBox>div>input:focus .button{
-    color: #fff;
-    background: #2d83d0;
-}
 .repaymentBox .buttonBox .button{
     width:93%;
     margin: auto;
@@ -20,6 +15,10 @@
     height: 3rem;
     border-radius: 6px;
     text-align: center;
+}
+.repaymentBox .inputBox>div>input:focus .repaymentBox .buttonBox .button{
+    color: #fff;
+    background: #2d83d0;
 }
 .repaymentBox .inputBox{
     border: 1px solid #e5e5e5;

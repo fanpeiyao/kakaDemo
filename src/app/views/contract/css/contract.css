@@ -53,6 +53,7 @@
 .order-list .fn-nav-tabs>li a{
     margin-right: 5px;
     display: block;
+    background: #fff;
     position: relative;
 }
 .order-list .myorder-tabs>li>a:hover{

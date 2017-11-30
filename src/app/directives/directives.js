@@ -159,7 +159,7 @@ myApp.directive('butterToast', function() {
                     //高度处理
                     var head = $('.header')[0];
                     var foot = $('.footer')[0];
-                    var height  = $(window).height() - (head == undefined ? 50 :head.clientHeight) - (foot == undefined ? 42 : foot.clientHeight) -$('.wrapper-head')[0].clientHeight -2;
+                    var height  = $(window).height() - (head == undefined ? 0 :head.clientHeight) - (foot == undefined ? 42 : foot.clientHeight) -$('.wrapper-head')[0].clientHeight -2;
                     $(wrapper).css("min-height",height);
 
                     //滚动时
