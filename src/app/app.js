@@ -130,7 +130,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 controller:'ContractListCtrl'
             })
             .state('contract.contractDetail',{
-                url:'/contractList',
+                url:'/contractDetail',
                 title:'合同详情',
                 backState:'contract.contractList',
                 templateUrl:'views/contract/contractDetail.html',
