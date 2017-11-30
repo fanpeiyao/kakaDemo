@@ -3,16 +3,39 @@
     <div class="wrapper-head">
         <!--搜索-->
         <search-bar></search-bar>
-        <!--tab切换-->
+        <!--切换导航-->
         <tab-bar>
-            <li ng-repeat="status in paymentStatusArray">
-                <a  class="fn-btn " href="javascript:void(0)" ng-click="changeStatus(status)">{{status.name}}</a>
+            <li ng-repeat="status in deliveryStatusArray">
+                <a  class="fn-btn fn-margin-0" href="javascript:void(0)" ng-click="changeStatus(status)">{{status.name}}</a>
             </li>
+            <li><a class="fn-btn fn-margin-0" href="javascript:void(0)" ng-click="changeTime(7)">一个月内</a></li>
+            <li><a class="fn-btn fn-margin-0" href="javascript:void(0)" ng-click="changeTime(8)">三个月内</a></li>
         </tab-bar>
     </div>
     <div class="back-gary fn-padding-sm">还款明细</div>
     <iscroll-wrapper class="repaymentDetail-box">
-        <li class="fn-padding-sm">
+        <li class="fn-padding-sm ">
+            <div class="fn-g fn-g-collapse fn-text-center hl40 back-gary">
+                <div class="fn-u-sm-3">到账日期</div>
+                <div class="fn-u-sm-6">合同编号</div>
+                <div class="fn-u-sm-3">客户名称</div>
+                <!--<div class="fn-u-sm-2">到账金额</div>-->
+            </div>
+            <div class="fn-g fn-g-collapse fn-text-center hl40">
+                <div class="fn-u-sm-3">2017-11-29</div>
+                <div class="fn-u-sm-6 text-gary">XGRZ-01-201710-0005</div>
+                <div class="fn-u-sm-3 text-gary">张满和</div>
+                <!--<div class="fn-u-sm-2 text-red" >￥7103.00</div>-->
+            </div>
+            <div class="fn-g fn-g-collapse fn-padding-sm  back-gary">
+                <div class="fn-u-sm-12 fn-padding-bottom-sm">到账金额<span class="text-red fn-fr">￥7103.00</span></div>
+                <div class="fn-u-sm-2">备注</div>
+                <div class="fn-u-sm-10 note text-gary" style="padding: .4rem  1rem;">
+                    已经还款一部分，余下的请尽快还款
+                </div>
+            </div>
+        </li>
+        <li class="fn-padding-sm fn-margin-top-sm">
             <div class="fn-g fn-g-collapse fn-text-center hl40 back-gary">
                 <div class="fn-u-sm-3">到账日期</div>
                 <div class="fn-u-sm-6">合同编号</div>
