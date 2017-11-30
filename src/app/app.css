@@ -358,9 +358,10 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
     position: fixed;
     width: 95%;
     margin: 0 2.5%;
-    top:25%;
+    top:50%;
     left: 0;
 }
+
 .fn-modal-actions{
     max-width: 720px;
 }
