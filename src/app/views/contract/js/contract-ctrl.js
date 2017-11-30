@@ -4,6 +4,7 @@
 
 angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","ContractService",function ($scope,$rootScope,ContractService) {
     var page,time,status;
+
     $scope.changeStatus = function(newStatus){
         page = 0;
         time = 0;

@@ -377,8 +377,9 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
         var rootState = "app";
 
         $rootScope.iswx = function () {
+
             var ua = navigator.userAgent.toLowerCase();
-            if (ua.match(/MicroMessenger/i) == "miscromessenger"){
+            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
                 return true;
             }else{
                 return false;
