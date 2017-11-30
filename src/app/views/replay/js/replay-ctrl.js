@@ -13,6 +13,45 @@ angular.module("myApp").controller("ReplayListCtrl",["$scope","ReplayService",fu
         $scope.deliverys= loadDeliverys(status,page,newTime);
     };
 
+    function getTime(number) {
+        var now=new Date();
+        var date;
+        if(number>180){
+            date=new Date(number);
+        }else{
+            date=new Date(now.getTime()-number*24*3600*1000);
+        }
+        var year = date.getFullYear();
+        var month = date.getMonth()+1;
+        if(month > 12) month = 1;
+        var day=date.getDate();
+        if(month<10)
+            month="0"+month;
+        if(day < 10)
+            day="0"+day;
+        return year+'-'+month+'-'+day;
+    }
+    //自定义日期
+    $scope.changeTimeauto=function (start,end) {
+        $modal.acton({id:'changetime-action',act:'open'});
+    }
+    $scope.searchTimeout=function (start,end) {
+        var startDate=new Date(start);
+        var endDate=new Date(end);
+        if(startDate.valueOf()>endDate.valueOf()){
+            $modal.alert('起始日期不能大于结束日期');
+        }else{
+            startDate=getTime(startDate.valueOf()==='NaN-NaN-NaN')?undefined:getTime(startDate.valueOf());
+            $scope.filter.start_date=startDate;
+            $scope.filter.end_date=getTime(endDate.valueOf());
+            // $scope.changeFilter()
+        }
+        $modal.action({id:'changetime-action',act:'close'});
+    }
+
+
+
+
     $scope.refreshPage = function () {
         $scope.deliverys = loadDeliverys(status,page,time);
     };

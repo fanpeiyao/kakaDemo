@@ -5,11 +5,10 @@
         <search-bar></search-bar>
         <!--切换导航-->
         <tab-bar>
-            <li ng-repeat="status in deliveryStatusArray">
-                <a  class="fn-btn fn-margin-0" href="javascript:void(0)" ng-click="changeStatus(status)">{{status.name}}</a>
+            <li >
+                <a  class="fn-btn fn-margin-0" href="javascript:void(0)" ng-click="changeStatus(status)">全部</a>
             </li>
-            <li><a class="fn-btn fn-margin-0" href="javascript:void(0)" ng-click="changeTime(7)">一个月内</a></li>
-            <li><a class="fn-btn fn-margin-0" href="javascript:void(0)" ng-click="changeTime(8)">三个月内</a></li>
+            <li><a class="fn-btn fn-margin-0" href="javascript:void(0)" data-fn-modal="{target:'#changeTime-action'}">日期</a></li>
         </tab-bar>
     </div>
     <div class="back-gary fn-padding-sm">还款明细</div>
@@ -58,6 +57,33 @@
         </li>
     </iscroll-wrapper>
 
+    <div class="fn-modal fn-modal-alert" id="changeTime-action">
+        <div class="fn-modal-dialog">
+            <!--<div class="fn-modal-hd"></div>-->
+            <div class="fn-modal-bd">
+               <div class="fn-fg" style="margin: 0 1rem;position: relative;top: 3rem;">
+                   <div class="fn-u-sm-6 fn-cf fn-padding-0">
+                       <span class="fn-fl">起始：</span>
+                       <div class="fn-fl">
+                           <input type="date">
+                       </div>
+                   </div>
+                   <div class="fn-u-sm-6 fn-cf fn-padding-0">
+                       <span class="fn-fl">结束：</span>
+                       <div class="fn-fl">
+                           <input type="date">
+                       </div>
+                   </div>
+               </div>
+            </div>
+            <div class="fn-modal-footer skin-back">
+                <span class="fn-modal-btn fn-modal-btn-bold" style="color: #fff;" data-fn-modal-close>搜索</span>
+            </div>
+        </div>
+    </div>
+
+
 </div>
+
 <!--bottom bar  -->
 <bottom-bar></bottom-bar>
