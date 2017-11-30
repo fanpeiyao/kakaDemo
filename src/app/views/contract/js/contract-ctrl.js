@@ -115,6 +115,7 @@ angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","Co
 myApp.controller("ContractDetailCtrl",["$scope","$rootScope",'$stateParams','ContractService',function ($scope,$rootScope,$stateParams,ContractService) {
     //取得传过来的参数
     var orderId = $stateParams.orderId;
+    console.log(orderId)
     $scope.order = ContractService.getOrderDetail(orderId);
 }]);
 

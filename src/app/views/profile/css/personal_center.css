@@ -37,12 +37,54 @@ html{background-color: #F2F2F2;}
 
 .profile .account>i{background:url("../img/list_icon00.png") no-repeat;background-size:100% 100%;}
 .profile .address>i{background:url("../img/list_icon01.png") no-repeat;background-size:100% 100%;}
-.profile .shopCar>i{background:url("../img/list_icon02.png") no-repeat;background-size:100% 100%;}
+.profile .list>a>li.shopCar>i{
+    color: #fc9b16;
+    height: 3.7rem;
+    top: 0;
+    line-height: 3.7rem;
+}
 .profile .collect>i{background:url("../img/list_icon03.png") no-repeat;background-size:100% 100%;}
 .profile .changePw>i{background:url("../img/list_icon04.png") no-repeat;background-size:100% 100%;}
 .profile .child>i{background:url("../img/list_icon05.png") no-repeat;background-size:100% 100%;}
 
+.profile .listBox{
+    width:100%;
+}
+.profile .listBox>li{
+    width:100%;
+    height: 3.7rem;
+    line-height: 3.7rem;
+    color:#828282;
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #f4f4f4;
+}
+.profile .listBox>li>a{
+    color:#4C4B4B;
+    display: inline-block;
+    width: 100%;
+}
+.profile .listBox>li>a>span.spa{
+    margin-left: 1.5rem;
+}
 
+.profile .listBox>li>a>span.inp{
+    position: absolute;
+    right: 7%;
+    color:#9F9F9F;
+}
+
+.profile .listBox>li>a>em{
+    right: 1.5rem;
+    width: 0.3rem;
+    height: 0.83rem;
+    background: url(../img/list_icon_left.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    margin-top: -0.41rem;
+}
 /*编辑地址、修改密码、新增地址*/
 .profile .addAddress{width:100%;height:100%;background-color:#F2F2F2;}
 .profile .addAddress .add_line{width:100%;height:1.1rem;background-color:#F2F2F2;}
@@ -93,3 +135,85 @@ html{background-color: #F2F2F2;}
 .profile #select_contact{display: inline-block;width: 75%;height: 3rem;border: none;float: right;position: relative;}
 .profile #show_contact{width:100%;height:3rem;line-height:3rem;border:none;padding-left:1rem;}
 .ios-select-widget-box header.iosselect-header a {color:#2D83CE;}
+
+/*修改手机号*/
+.changePhone{
+    background: #f2f2f2;
+}
+.changePhone .changePhone-title{
+    padding: 1.6rem 1.6rem 1.2rem;
+    margin: auto;
+}
+.changePhone .new-formBox{
+    min-height: 2rem;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+}
+.new-formBox .fn-form-group{
+    padding: 0 0 0 1.6rem;
+    margin: 0;
+}
+.new-formBox .fn-form-group .fn-g-collapse{
+    border-bottom: 1px solid #eee;
+}
+.new-formBox .fn-form-group .fn-input-group-label{
+    border:none;
+    height: 3.6rem;
+    color: #6f6f6f;
+    background: transparent;
+    width: 5.6rem;
+    text-align: left;
+    padding: 0;
+}
+.new-formBox .fn-form-group input{
+    border:none;
+    height: 3.6rem;
+    box-shadow: none;
+    outline: none;
+    background: transparent;
+}
+.new-formBox .code-btn{
+    height:3.6rem;
+    color:#2d83ce;
+    background: transparent;
+    padding-right: 1.6rem;
+    text-align: right;
+}
+.new-button {
+    background: #f2f2f2;
+    padding-top: 3rem;
+}
+.new-button .fn-btn-block{
+    width: 93%;
+    margin: auto;
+    color: #fff;
+    background: #2d83d0;
+    height: 3rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

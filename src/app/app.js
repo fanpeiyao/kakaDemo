@@ -3,7 +3,7 @@
  */
 var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.espresso'])
     .config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
-        $urlRouterProvider.otherwise('/app');
+        $urlRouterProvider.otherwise('/account/login');
         $stateProvider
 
         //公共部分
@@ -280,6 +280,13 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 templateUrl:'views/profile/myAccount.html',
                 controller:'myAccountCtrl'
             })
+            .state('profile.changePhone',{
+                url:'/myAccount',
+                title:'修改手机号',
+                backState:'profile.myAccount',
+                templateUrl:'views/profile/changePhone.html',
+                controller:'changePhoneCtrl'
+            })
             .state('profile.myAddress',{
                 url:'/myAddress',
                 title:'地址管理',
@@ -329,7 +336,6 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
             })
             .state('account.login',{
                 url:'/login',
-                title:'登录',
                 templateUrl:'views/account/login.html',
                 controller:'LoginCtrl'
             })

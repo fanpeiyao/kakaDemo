@@ -5,6 +5,13 @@ angular.module("myApp").controller('InfoCtrl',['$scope','UserInfoService',
             $scope.role=getInfoText.role;
         }])
 
+    .controller('changePhoneCtrl',['$scope','UserInfoService',
+        function($scope,UserInfoService){
+            $scope.changePhone = function (mobile,code) {
+                var toast = $.toast.content('修改成功').show('info',2000).clear();
+            }
+    }])
+
     .controller('myAccountCtrl',['$scope','UserInfoService',
         function($scope,UserInfoService){
             var getMyAccountText=UserInfoService.getUserInfo();
