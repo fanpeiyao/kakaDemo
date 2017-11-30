@@ -1,0 +1,24 @@
+
+.repaymentDetail .back-gary{
+    background-color: #f2f2f2;
+}
+.repaymentDetail .text-gary{
+    color: #818181;
+}
+.repaymentDetail .text-red{
+    color:#fb3b4e;
+}
+.repaymentDetail .hl40{
+    height: 40px;
+    line-height: 40px;
+}
+.repaymentDetail .note{
+    border-radius: 5px;
+    border:1px solid #dfdfdf;
+    background-color: #fff;
+    min-height: 50px;
+}
+.repaymentDetail .repaymentDetail-box li{
+    border-width: 0 0 1px 0;
+    font-size: 1.1rem;
+}
