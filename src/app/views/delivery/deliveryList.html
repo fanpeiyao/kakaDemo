@@ -1,17 +1,14 @@
 <div id="repaymentDetail" class="repaymentDetail">
 
-    <div class="wrapper-head back-blue plr-1">
+    <div class="wrapper-head">
         <!--搜索-->
-        <!--<div class="searchDiv">-->
-            <!--<i class="iconfont icon-sou"></i>-->
-            <!--<input type="text" class="search" placeholder=""><i class="iconfont icon-guanbi"></i>-->
-        <!--</div>-->
+        <search-bar></search-bar>
         <!--tab切换-->
-        <!--<tab-bar>-->
-        <!--<li ng-repeat="status in paymentStatusArray">-->
-        <!--<a  class="fn-btn " href="javascript:void(0)" ng-click="changeStatus(status)">{{status.name}}</a>-->
-        <!--</li>-->
-        <!--</tab-bar>-->
+        <tab-bar>
+        <li ng-repeat="status in paymentStatusArray">
+        <a  class="fn-btn " href="javascript:void(0)" ng-click="changeStatus(status)">{{status.name}}</a>
+        </li>
+        </tab-bar>
     </div>
     <div class="back-gary fn-padding-sm">还款明细</div>
     <iscroll-wrapper class="repaymentDetail-box">
