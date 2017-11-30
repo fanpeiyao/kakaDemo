@@ -62,6 +62,7 @@
 
 .repaymentBox .inputBox>div>input{
     color: #000;
+    caret-color: #2d83ce;
     border: none;
     outline: none;
     margin-left: 20px;

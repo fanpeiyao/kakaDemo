@@ -376,6 +376,14 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
         var loginState = "account.login";
         var rootState = "app";
 
+        $rootScope.iswx = function () {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "miscromessenger"){
+                return true;
+            }else{
+                return false;
+            }
+        }();
         //userinfo checking part
         $rootScope.$on("$stateChangeStart", function(event,toState,toParams,fromState,fromParams){
             var valid =  false;

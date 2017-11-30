@@ -120,17 +120,7 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
     color: #444;
 }
 .go-top{
-    z-index:1001;
-    width:3rem;
-    height:3rem;
-    line-height:3rem;
-    border-radius: 0;
-    text-align:center;
-    right: 10px;
-    overflow: hidden;
-    bottom:6rem;
-    position:fixed;
-    background-color:rgba(110,110,110,0.85);
+    display: none;
 }
 
 .header{
@@ -144,6 +134,7 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
 .footer{
     width:100%;
     background: #fff;
+    border-top: 1px solid #e5e5e5;
 }
 .footer .fn-btn-group{
     width:100%;
@@ -347,6 +338,7 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
 #searchInput.search-nav .payment>.icon-guanbi-copy{
     margin-right: 2%;
     color: #95bddf;
+    line-height: 30px;
 }
 #searchInput.newSearchInput .payment>.icon-guanbi-copy{
     color: #cbcbcb;
