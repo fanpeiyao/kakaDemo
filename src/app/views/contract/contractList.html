@@ -7,16 +7,16 @@
         <!--切换分公司-->
         <div class="companyBox">
             <div class="wrap-expand" id="companyBox" data-fn-modal="{target:'#company-action'">
-                <i class="iconfont fn-fl icon-gongsi skin-color"></i>
+                <i class="iconfont fn-fl icon-34 skin-color"></i>
                 <span class="fn-text-truncate bindTxt" ng-bind="currentCompany.companyName"></span>
-                <span class="fn-text-rignt fn-fr"><i class="iconfont icon-qiehuan1 skin-color"></i></span>
+                <span class="fn-text-rignt fn-fr"><i class="iconfont icon-qiehuan skin-color"></i></span>
             </div>
 
             <fn-action action-id="company-action">
                 <ul class="fn-list">
                     <li ng-repeat="company in companyList" data-fn-modal-close ng-click="changeCompany(company)">
                         <div class="fn-u-sm-2">
-                            <i class="iconfont" ng-class="{'icon-queren skin-color':currentCompany.companyId == company.companyId,'icon-yuanquan':currentCompany.companyId != company.companyId}"></i>
+                            <i class="iconfont" ng-class="{'icon-queren1 skin-color':currentCompany.companyId == company.companyId,'icon-yuanquan1':currentCompany.companyId != company.companyId}"></i>
                         </div>
                         <a class="fn-u-sm-10" ng-bind="company.companyName"></a>
                     </li>
@@ -39,9 +39,9 @@
                 <!--订单编号-->
                 <div class="num-content statusFa">
                     <span class="myorderID">
-                        <i class="iconfont icon-wodedingdan i-Blue"></i>
+                        <i class="iconfont icon-hetong skin-color"></i>
                         {{order.id}}
-                        <i class="iconfont icon-fanhui fn-fr Blue"></i>
+                        <i class="iconfont icon-fanhui fn-fr skin-color"></i>
                     </span >
                 </div>
 

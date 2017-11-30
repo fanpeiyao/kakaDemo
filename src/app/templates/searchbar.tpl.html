@@ -1,11 +1,11 @@
 <div class="skin-back">
     <div id="searchInput" class="fn-g search-nav search-tpl slide-top skin-padding" ng-class="{'newSearchInput':showSearchBody,'withheaddSearchInput':!iswx}" >
         <form ng-submit="keySearch(searchVal)" class="payment skin-back-dark fn-fl" id="proForm">
-            <i class="iconfont icon-sou p2 skin-white-color"></i>
+            <i class="iconfont icon-sousuo p2 skin-white-color"></i>
             <a ui-sref="myorder.myorderSearch">
                 <input type="search" ng-focus="showSearch()" placeholder="输入关键字搜索" class="skin-white-color payment-input" ng-model="searchVal">
             </a>
-            <i class="iconfont icon-guanbi1 fn-fr skin-color-lighter" ng-click="clickClean($event)"></i>
+            <i class="iconfont icon-guanbi-copy fn-fr skin-color-lighter" ng-click="clickClean($event)"></i>
 
         </form>
         <span class="fn-fr skin-color" ng-click="closeSearch()">取消</span>

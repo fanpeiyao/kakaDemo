@@ -49,6 +49,51 @@ angular.module("myApp").controller("DeliveryListCtrl",["$scope","DeliveryService
         $scope.deliverys = loadDeliverys(status,page,time);
     }
 
+
+
+
+    //搜索
+    $scope.showSearch = function () {
+        $scope.showSearchBody = true;
+    }
+    $scope.closeSearch = function () {
+        $scope.showSearchBody = false;
+    }
+    $scope.keySearch = function (keyValue) {
+        $scope.searchVal = keyValue;
+        $scope.page = 0;
+        loadOrders();
+        $scope.showSearchBody = false;
+        saveSearchHistory(keyValue);
+    }
+    $scope.clickClean = function ($event) {
+        $event.stopPropagation();
+        $scope.searchVal = '';
+        $scope.page = 0;
+        if(!$scope.showSearchBody)
+            loadOrders()
+    }
+    function saveSearchHistory(keyValue) {
+        if (keyValue === null || keyValue ==="")
+            return
+        var hisstring = istore.getLocal('contractHistory') || [];
+        var dup = false;
+        hisstring.forEach(function (item) {
+            if (item == keyValue)
+                dup = true;
+        })
+        if (!dup){
+            if (hisstring.length<10){
+                hisstring.unshift(keyValue)
+            }else {
+                hisstring.pop();
+                hisstring.unshift(keyValue)
+            }
+            istore.setLocal('contractHistory',hisstring)
+        }
+    }
+
+
     //初始化
     initPage();
 }]);

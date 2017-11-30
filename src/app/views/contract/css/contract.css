@@ -34,110 +34,7 @@ html{background-color:#fff;}
 .repayList .listbottom_content{width:100%;}
 .repayList .listbottom_content li{width:100%;height:3.5rem;line-height:3.5rem;color:#818181;overflow: hidden;border-bottom: 1px solid #dbdbdb;}
 .repayList .listbottom_content li span{display:inline-block;width:25%;float:left;text-align:center;}
-#searchInput .payment>a>input{
-    display: inline-block;
-    width: 100%;
-    height: 2.4rem;
-    padding: .5rem 0 .5rem 10%;
-    line-height: 2.4rem;
-    border-radius: .6rem;
-    background-color: transparent;
-}
-#searchInput .payment>a>input::-webkit-input-placeholder{
-    color: #fff;
-}
-#searchInput.search-nav>span{
-    display: none;
-    height: 100%;
-    line-height: 2.4rem;
-    font-size: 1.28rem;
-}
-#searchInput.newSearchInput>span{
-    display: block;
-}
-#searchInput.withheadSearchInput{
-    top:-4rem;
-}
-.order-list .p2{
-    left:2%;
-    vertical-align: middle;
-    height: 100%;
-    line-height: 30px;
-    font-size: 1.8rem;
-    position: absolute;
-    color: #fff;
-}
-#searchInput.search-nav .payment{
-    width:100%;
-    border-radius: .5rem;
-    position: relative;
-    z-index: 1000;
-    height: 30px;
-    background: #0e69b8;
-}
-#searchInput.search-nav.newSearchInput .payment{
-    width:90%;
-    background: #f6f6f6;
-    color: #acacac;
-}
-#searchInput.search-nav.newSearchInput .payment>i{
-    color: #acacac;
-}
-#searchInput.search-nav .payment-input{
-    border:none;
-    width:80%;
-    outline: none;
-    line-height: 26px;
-    height:26px;
-}
-#searchInput.search-nav.newSearchInput .payment-input{
-    color: #666;
-}
-#searchInput.search-nav.newSearchInput .payment-input::-webkit-input-placeholder{
-    color: #666;
-}
-#searchInput.newSearchInput{
-    padding: 1.6rem .8rem;
-    border-bottom: 1px solid #e5e5e5;
-    z-index: 1002;
-    position: absolute;
-    top:0;
-    height:auto;
-    box-sizing: border-box;
-    background: #fff;
-}
-.proSear{
-    width: 100%;
-    position: fixed;
-    top:0;
-    bottom:0;
-    z-index: 1001;
-    background: #fff;
-    max-width: 720px;
-}
-.proSear-category{
-    width: 100%;
-    margin: 0 auto;
-    padding: .4rem .8rem 0 .8rem;
-    margin-top: 6.6rem;
-}
-.proSear .his_list>li{
-    margin-top: 1rem;
-    height: 2rem;
-}
-.skin-padding-right{
-    padding-right: .8rem;
-}
-.proSear .his_list>li>span{
-    font-size: 1rem;
-    width: auto;
-    height: 2rem;
-    padding: 0 1.2rem;
-    line-height: 2rem;
-    border-radius: 30px;
-    background-color: #f6f6f6;
-    color: #666;
-}
+
 /*tab切换*/
 .order-list .myorder-tabs>li a{
     padding: .4rem 0;
@@ -178,8 +75,8 @@ html{background-color:#fff;}
     height: 3.1rem;
 }
 .order-list .myorder-box .num-content .icon-fanhui {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
 }
 .order-list .num-content{
     border-bottom: 1px solid #e5e5e5;
@@ -234,19 +131,6 @@ html{background-color:#fff;}
 }
 
 
-/*主题色*/
-.skin-back{
-    background: #2d83ce;
-}
-.skin-color{
-    color: #2d83ce;
-}
-.skin-padding{
-    padding: .8rem;
-}
-.skin-color-lighter{
-
-}
 /*******************************分公司****************************/
 .companyBox{
     background: white;
