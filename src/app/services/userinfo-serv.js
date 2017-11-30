@@ -27,12 +27,12 @@ angular.module('myApp').service('UserInfoService',['$es',function($es){
             return {
                 retCode:'200',
                 retMsg:'success',
-                companyName:'浙江工银聚有限公司',
-                role:'经销商',
+                companyName:'徐工租赁',
+                role:'客户',
                 companyNum:'007',
                 accountNum:'zjhgtest1',
                 accountName:'zjhgtest1',
-                name:'浙江化工测试',
+                name:'徐工租赁',
                 phone:'1585858558'
             };
         //##

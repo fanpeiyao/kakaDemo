@@ -26,7 +26,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                 case 0:
                     for(i = 0;i<10;i++){
                         order = {};
-                        order.id = "DD2017000000"+time+page+i;
+                        order.id = 'XGRZ-01-201710-001'+i;
                         order.time = "2017年"+time;
                         order.name = "订单名称";
                         order.money = "1106"+time+page+i;
@@ -38,7 +38,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                 case 1:
                     for(i = 0;i<10;i++){
                         order = {};
-                        order.id = "DD2017111111"+time+page+i;
+                        order.id = 'XGRZ-01-201710-002'+i;
                         order.time = "2017年"+time;
                         order.name = "订单名称";
                         order.money = "1106"+time+page+i;
@@ -50,7 +50,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                 case 2:
                     for(i = 0;i<10;i++){
                         order = {};
-                        order.id = "DD201722222"+time+page+i;
+                        order.id = 'XGRZ-01-201710-003'+i;
                         order.time = "2017年"+time;
                         order.name = "订单名称";
                         order.money = "1106"+time+page+i;
@@ -62,7 +62,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                 default:
                     for(i = 0;i<10;i++){
                         order = {};
-                        order.id = "DD2017000000"+time+page+i;
+                        order.id = 'XGRZ-01-201710-001'+i;
                         order.time = "2017年"+time;
                         order.name = "订单名称";
                         order.money = "1106"+time+page+i;

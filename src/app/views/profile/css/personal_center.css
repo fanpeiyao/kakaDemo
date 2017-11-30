@@ -37,7 +37,12 @@ html{background-color: #F2F2F2;}
 
 .profile .account>i{background:url("../img/list_icon00.png") no-repeat;background-size:100% 100%;}
 .profile .address>i{background:url("../img/list_icon01.png") no-repeat;background-size:100% 100%;}
-.profile .shopCar>i{background:url("../img/list_icon02.png") no-repeat;background-size:100% 100%;}
+.profile .list>a>li.shopCar>i{
+    color: #fc9b16;
+    height: 3.7rem;
+    top: 0;
+    line-height: 3.7rem;
+}
 .profile .collect>i{background:url("../img/list_icon03.png") no-repeat;background-size:100% 100%;}
 .profile .changePw>i{background:url("../img/list_icon04.png") no-repeat;background-size:100% 100%;}
 .profile .child>i{background:url("../img/list_icon05.png") no-repeat;background-size:100% 100%;}
