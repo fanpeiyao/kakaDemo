@@ -132,7 +132,6 @@ angular.module("myApp").controller("ReplayListCtrl",["$scope","ReplayService",fu
         }
     }
 
-
     //初始化
     initPage();
 }]);
