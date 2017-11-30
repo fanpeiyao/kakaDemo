@@ -34,7 +34,7 @@ myApp.directive('butterToast', function() {
             }
         }
     }
-}).directive('headBar',['$rootScope','$state',function($rootScope,$state){
+}).directive('headBar',['$rootScope','$state','$window','$timeout',function($rootScope,$state){
     return {
         restrict:'E',
         replace:true,
