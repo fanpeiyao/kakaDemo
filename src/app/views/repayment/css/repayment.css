@@ -6,6 +6,11 @@
     background: #f2f2f2;
     padding-top: 3rem;
 }
+
+.repaymentBox .inputBox>div>input:focus .button{
+    color: #fff;
+    background: #2d83d0;
+}
 .repaymentBox .buttonBox .button{
     width:93%;
     margin: auto;
@@ -35,6 +40,7 @@
     padding-bottom: .8rem;
     padding-top: .8rem;
     height: 4.8rem;
+    overflow: hidden;
     position: relative;
 }
 .repaymentBox .inputBox>div>span{
