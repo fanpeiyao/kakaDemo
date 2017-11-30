@@ -1,16 +1,18 @@
 
 <div class="repaymentBox">
     <h4>应还款金额 <span>6025.03</span> 元</h4>
-    <div class="inputBox">
-        <p>还款金额</p>
-        <div >
-            <span>￥</span>
-            <input type="number" placeholder="0.00" class="input">
+    <form name="moneyForm" novalidate>
+        <div class="inputBox">
+            <p>还款金额</p>
+            <div >
+                <span>￥</span>
+                <input type="text" placeholder="0.00" name="money" ng-model="money" required>
+            </div>
+            <textarea placeholder="添加备注 (50字以内)" maxlength="50" ng-model="note"></textarea>
         </div>
-        <textarea placeholder="添加备注 (50字以内)" maxlength="50"></textarea>
-    </div>
+    </form>
     <div class="buttonBox">
-        <div class="button" ng-class="{'skin-back color-white':showButton}">确认还款</div>
+        <div class="button" ng-disabled="moneyForm.$invalid" ng-click="repayment()">确认还款</div>
     </div>
 </div>
 <!--bottom bar  -->
