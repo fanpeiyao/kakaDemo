@@ -17,6 +17,7 @@
     border:1px solid #dfdfdf;
     background-color: #fff;
     min-height: 50px;
+    padding: .4rem  1rem;
 }
 .repaymentDetail .repaymentDetail-box li{
     border-width: 0 0 1px 0;
