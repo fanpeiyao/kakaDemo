@@ -218,10 +218,33 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
                 .state('delivery.deliverySearch',{
                     url:'/deliverySearch',
                     backState:'delivery.deliveryList',
-                    templateUrl:'views/delivery/deliverySearch.html',
+                    templateUrl:'views/delivery/deliverySearch.html'
                     //controller:'deliverySearchCtrl'
                 })
-
+                /**
+                 * 还款明细
+                 */
+            .state('replay',{
+                url:'/replay',
+                templateUrl:'views/public/main.html',
+                abstract:true,
+                resolve:{
+                    load:['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load([
+                            'views/replay/js/replay-ctrl.js',
+                            'scripts/services/replay-serv.js',
+                            'views/replay/css/replay.css'
+                        ]);
+                    }]
+                }
+            })
+            .state('replay.replayList',{
+                url:'/replayList',
+                title:'还款计划',
+                backState:'app',
+                templateUrl:'views/replay/replayList.html',
+                controller:'ReplayListCtrl'
+            })
 
             /**
              * 个人信息

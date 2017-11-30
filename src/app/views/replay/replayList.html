@@ -1,0 +1,39 @@
+<div id="repaymentDetail" class="repaymentDetail">
+
+    <div class="wrapper-head">
+        <!--搜索-->
+        <search-bar></search-bar>
+        <!--tab切换-->
+        <tab-bar>
+            <li ng-repeat="status in paymentStatusArray">
+                <a  class="fn-btn " href="javascript:void(0)" ng-click="changeStatus(status)">{{status.name}}</a>
+            </li>
+        </tab-bar>
+    </div>
+    <div class="back-gary fn-padding-sm">还款明细</div>
+    <iscroll-wrapper class="repaymentDetail-box">
+        <li class="fn-padding-sm">
+            <div class="fn-g fn-g-collapse fn-text-center hl40 back-gary">
+                <div class="fn-u-sm-2">到账日期</div>
+                <div class="fn-u-sm-6">合同编号</div>
+                <div class="fn-u-sm-2">客户名称</div>
+                <div class="fn-u-sm-2">到账金额</div>
+            </div>
+            <div class="fn-g fn-g-collapse fn-text-center">
+                <div class="fn-u-sm-2">2017-11-29</div>
+                <div class="fn-u-sm-6 text-gary">XGRZ-01-201710-0005</div>
+                <div class="fn-u-sm-2 text-gary">张满和</div>
+                <div class="fn-u-sm-2 text-red" >￥7103.00</div>
+            </div>
+            <div class="fn-g fn-g-collapse fn-padding-sm  back-gary">
+                <div class="fn-u-sm-2">备注</div>
+                <div class="fn-u-sm-10 note text-gary" style="padding: 0 1rem;">
+                    已经还款一部分，余下的请尽快还款
+                </div>
+            </div>
+        </li>
+    </iscroll-wrapper>
+
+</div>
+<!--bottom bar  -->
+<bottom-bar></bottom-bar>

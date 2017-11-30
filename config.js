@@ -12,7 +12,7 @@ module.exports = {
         // {name:'payment',path: appPath + 'views/payment'},
         // {name:'order',path: appPath + 'views/order'},
         {name:'profile',path: appPath + 'views/profile'},
-        {name:'delivery',path: appPath + 'views/delivery'},
+        {name:'replay',path: appPath + 'views/replay'},
         {name:'public',path: appPath + 'views/public'},
         {name:'repayment',path: appPath + 'views/repayment'},
         {name:'contract',path: appPath + 'views/contract'}
