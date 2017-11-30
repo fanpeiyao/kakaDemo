@@ -21,9 +21,16 @@
                 <label class="spa" for="aCompany">客户名称 :</label>
                 <input class="inp" id="aCompany" type="text" value="{{name}}" readonly="readonly">
             </li>
+
+        </ul>
+        <ul class="listBox">
             <li>
-                <label class="spa" for="aPhone">联系手机 :</label>
-                <input class="inp" type="text" id="aPhone" value="{{phone}}" readonly="readonly">
+                <a ui-sref="profile.changePhone">
+                    <span class="spa" for="aPhone">修改手机号码</span>
+                    <!--user.phone-->
+                    <span class="inp" type="text" id="aPhone" ng-bind="15823589907" ></span>
+                    <em></em>
+                </a>
             </li>
         </ul>
 </form>

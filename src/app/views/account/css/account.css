@@ -1,4 +1,49 @@
-.code-btn{
-    line-height: 2.4rem;
-    height: 3.8rem;
+.loginmask{
+    background: #fff;
+    height: 100vh;
+}
+.loginmask .copyBox{
+    width: 100%;
+    text-align: center;
+    bottom:2rem;
+    font-size: 1rem;
+    position: absolute;
+}
+.login-logo{
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 10vh 0;
+}
+.loginBox{
+    width: 90%;
+    margin: 6% auto;
+}
+.loginBox .fn-form-group{
+    margin-bottom: 1.2rem;
+}
+.loginBox .fn-form-group .fn-input-group{
+    border-bottom: 1px solid #E8E8E8;
+}
+.loginBox .fn-form-group .fn-input-group .fn-input-group-label{
+    border:none;
+    height: 3rem;
+    background: transparent;
+    padding: 0 1.2rem 0 0;
+}
+.loginBox .color-gary{
+    color:#999;
+}
+.loginBox .fn-form-group .fn-input-group  .fn-form-field{
+    border:none;
+    height: 3rem;
+    box-shadow: none;
+    background: transparent;
+}
+.loginBtn{
+    border-radius: 2rem;
+    margin: 4rem 0 0 0;
+    outline: none;
+    font-size: 1.4rem;
+    background: #2d83ce;
 }

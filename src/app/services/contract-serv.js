@@ -103,14 +103,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                 branchCompany:[
                     {
                         companyId:'001',
-                        companyName:'ABC供应链集团有限公司'
-                    },{
-                        companyId:'002',
-                        companyName:'浙江化工有限公司'
-
-                    },{
-                        companyId:'003',
-                        companyName:'浙江某某集团有限公司'
+                        companyName:'徐工租赁'
                     }
                 ]
             };

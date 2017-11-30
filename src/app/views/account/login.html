@@ -1,17 +1,34 @@
-<div class="login-logo">
+<div class="loginmask">
+    <div class="login-logo">
+        徐工租赁
+    </div>
+
+    <div class="loginBox">
+        <form>
+            <fieldset>
+                <div class="fn-form-group">
+                    <div class="fn-input-group fn-input-group-secondary">
+                        <span class="fn-input-group-label"><i class="fn-icon-user color-gary fn-icon-fw"></i></span>
+                        <input type="text" class="fn-form-field" required minlength="4" maxlength="20" ng-model="loginName"
+                               placeholder="用户名/手机号"  ng-focus="showError = false">
+                    </div>
+                </div>
+
+                <div class="fn-form-group">
+                    <div  class="fn-input-group fn-input-group-secondary">
+                        <span class="fn-input-group-label"><i class="fn-icon-lock  color-gary fn-icon-fw"></i></span>
+                        <input type = "password" class="fn-form-field" ng-model="password" required maxlength="16"
+                               minlength="6" placeholder="请输入密码" ng-focus="showError = false">
+                    </div>
+                </div>
+
+                <div class="fn-alert fn-alert-danger" ng-show = "showError" ng-bind="errorMessage"></div>
+                <div>
+                    <button class="fn-btn fn-btn-secondary fn-btn-block loginBtn" ng-click="login(loginName,password)">登录</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="copyBox" >2017 徐工租赁版权所有</div>
 </div>
 
-<div ng-show = "!mobileLogin">
-    <login-form></login-form>
-</div>
-
-<div ng-show = "mobileLogin">
-    <mobile-login>
-    </mobile-login>
-</div>
-
-<fieldset>
-    <div class="fn-fl" ng-show = "!mobileLogin"><a ng-click = "mobileLogin = !mobileLogin">手机登录</a></div>
-    <div class="fn-fl" ng-show = "mobileLogin"><a  ng-click = "mobileLogin = !mobileLogin">帐号登录</a></div>
-    <div class="fn-fr"><a>忘记密码</a></div>
-</fieldset>
