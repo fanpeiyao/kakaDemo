@@ -14,13 +14,18 @@
 .repaymentBox .buttonBox .button{
     width:93%;
     margin: auto;
-    color:#999;
-    background: #dcdcdc;
+    color:#fff;
+    background: #2d83d0;
     line-height: 3rem;
     height: 3rem;
     border-radius: 6px;
     text-align: center;
 }
+.repaymentBox .buttonBox .button[disabled]{
+    color:#999;
+    background: #dcdcdc;
+}
+
 .repaymentBox .inputBox{
     border: 1px solid #e5e5e5;
     border-left: none;
