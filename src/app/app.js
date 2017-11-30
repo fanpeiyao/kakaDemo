@@ -125,19 +125,21 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
             .state('contract.contractList',{
                 url:'/contractList',
                 title:'合同',
+                backState:'app',
                 templateUrl:'views/contract/contractList.html',
                 controller:'ContractListCtrl'
             })
             .state('contract.contractDetail',{
                 url:'/contractList',
                 title:'合同详情',
+                backState:'contract.contractList',
                 templateUrl:'views/contract/contractDetail.html',
                 controller:'ContractDetailCtrl'
             })
             .state('contract.replayDetail',{
                 url:'/replayDetail',
                 // url:'/orderDetail/:orderId',
-                backState:'contract.contractList',
+                backState:'contract.contractDetail',
                 title:'还款计划',
                 templateUrl:'views/contract/replayDetail.html',
                 // controller:'ReplayDetailCtrl'
