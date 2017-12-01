@@ -49,7 +49,7 @@ var myApp = angular.module("myApp",['ui.router','oc.lazyLoad','ngAnimate','icbc.
             })
             .state('repayment.repaymentDetail',{
                 url:'/repaymentDetail',
-                title:'还款',
+                title:'我要还款',
                 backState:'app',
                 templateUrl:'views/repayment/repaymentDetail.html',
                 controller:'RepaymentCtrl'

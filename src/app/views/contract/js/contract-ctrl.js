@@ -59,7 +59,6 @@ angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","Co
     //分公司
     var all = {'companyId':undefined,'companyName':'全部分公司'};
     $scope.currentCompany = all;
-    console.log(ContractService.getCompanyList())
     $scope.companyList = [all].concat(ContractService.getCompanyList());
     $('#companyBox').on('click',function () {
         $('#company-action').modal('open')
@@ -116,7 +115,6 @@ angular.module("myApp").controller("ContractListCtrl",["$scope","$rootScope","Co
 myApp.controller("ContractDetailCtrl",["$scope","$rootScope",'$stateParams','ContractService',function ($scope,$rootScope,$stateParams,ContractService) {
     //取得传过来的参数
     var orderId = $stateParams.orderId;
-    console.log(orderId)
     $scope.order = ContractService.getOrderDetail(orderId);
 }]);
 
