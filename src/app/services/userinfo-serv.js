@@ -78,19 +78,19 @@ angular.module('myApp').service('UserInfoService',['$es',function($es){
             retMsg:'success',
             myAddressList:[
                 {
-                    name:"董彬",
+                    name:"小明",
                     phone:"1382323232",
                     address:"成都市下城区西湖文化广场西区萨克雷999号楼8层",
                     state:true
                 },
                 {
-                    name:"范佩瑶",
+                    name:"小红",
                     phone:"1566363636",
                     address:"杭州市下城区西湖文化广场西区萨克雷",
                     state:false
                 },
                 {
-                    name:"王萌",
+                    name:"小黄",
                     phone:"1999999999",
                     address:"杭州市下城区西湖文化广场",
                     state:false
