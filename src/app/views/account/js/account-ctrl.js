@@ -5,9 +5,7 @@ angular.module('myApp').controller('LoginCtrl',['$scope','$rootScope','$state','
 
 
     $scope.login = function (name,pass) {
-        if (name == 'admin' && pass == '123456'){
-            $state.go('app')
-        }
+        $state.go('app')
     }
 
 }])
