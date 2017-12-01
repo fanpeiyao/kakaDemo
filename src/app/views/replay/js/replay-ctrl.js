@@ -101,7 +101,7 @@ angular.module("myApp").controller("ReplayListCtrl",["$scope","ReplayService",fu
     $scope.keySearch = function (keyValue) {
         $scope.searchVal = keyValue;
         $scope.page = 0;
-        loadOrders();
+        /*loadOrders();*/
         $scope.showSearchBody = false;
         saveSearchHistory(keyValue);
     }
@@ -109,8 +109,8 @@ angular.module("myApp").controller("ReplayListCtrl",["$scope","ReplayService",fu
         $event.stopPropagation();
         $scope.searchVal = '';
         $scope.page = 0;
-        if(!$scope.showSearchBody)
-            loadOrders()
+        /*if(!$scope.showSearchBody)*/
+            /*loadOrders()*/
     }
     function saveSearchHistory(keyValue) {
         if (keyValue === null || keyValue ==="")

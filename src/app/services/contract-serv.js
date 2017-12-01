@@ -27,7 +27,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                     for(i = 0;i<10;i++){
                         order = {};
                         order.id = 'XGRZ-01-201710-001'+i;
-                        order.time = "2017年"+time;
+                        order.time = "2017年12月1日";
                         order.name = "订单名称";
                         order.money = "1106"+time+page+i;
                         order.status = 0;
@@ -39,7 +39,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                     for(i = 0;i<10;i++){
                         order = {};
                         order.id = 'XGRZ-01-201710-002'+i;
-                        order.time = "2017年"+time;
+                        order.time = "2017年12月1日";
                         order.name = "订单名称";
                         order.money = "1106"+time+page+i;
                         order.status = 1;
@@ -51,7 +51,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                     for(i = 0;i<10;i++){
                         order = {};
                         order.id = 'XGRZ-01-201710-003'+i;
-                        order.time = "2017年"+time;
+                        order.time = "2017年12月1日";
                         order.name = "订单名称";
                         order.money = "1106"+time+page+i;
                         order.status = 2;
@@ -63,7 +63,7 @@ angular.module("myApp").service("ContractService",['$es',function($es){
                     for(i = 0;i<10;i++){
                         order = {};
                         order.id = 'XGRZ-01-201710-001'+i;
-                        order.time = "2017年"+time;
+                        order.time = "2017年12月1日";
                         order.name = "订单名称";
                         order.money = "1106"+time+page+i;
                         order.status = Number(Math.random()*2).toFixed();

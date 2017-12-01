@@ -7,7 +7,7 @@ angular.module("myApp").service("ReplayService",function(){
         ];
     };
     this.getDeliveryList = function(status,page,time){
-        var deliveryList = [];
+        /*var deliveryList = [];
         var i,delivery;
         switch(status.id){
             case 0:
@@ -43,11 +43,11 @@ angular.module("myApp").service("ReplayService",function(){
                     deliveryList.push(delivery);
                 }
                 break;
-        }
+        }*/
         return {
             retCode:'200',
             retMsg:'msg',
-            deliveryList:deliveryList
+            // deliveryList:deliveryList
         }
     };
 
